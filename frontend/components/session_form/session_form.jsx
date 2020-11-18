@@ -9,6 +9,16 @@ class SessionForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
+
+    }
+
+    handleDemoSubmit() {
+        const user = {
+            email: 'demoUser@gmail.com',
+            password: 'password'
+        }
+        this.props.processForm(user);
     }
 
     update(field) {
@@ -60,7 +70,8 @@ class SessionForm extends React.Component {
                             onChange={this.update('password')}
                         />
                     </label>
-                    <button type="button" onClick={this.handleSubmit}>Sign In</button>
+                    <button onClick={this.handleSubmit}>Sign Up</button>
+                    <br/>
                 </form>
             </div>
         )
@@ -83,8 +94,10 @@ class SessionForm extends React.Component {
                             onChange={this.update('password')}
                         />
                     </label>
-                    <button type="button" onClick={this.handleSubmit}>Log In</button>
+                    <button onClick={this.handleSubmit}>Log In</button>
+                    <br/>
                 </form>
+                <button onClick={this.handleDemoSubmit}>Demo Signin</button>
             </div>
         )
     
