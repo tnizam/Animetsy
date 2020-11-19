@@ -11,6 +11,7 @@ const App = () => (
         <Modal />
         <header >
             <GreetingContainer />
+            
         </header>
         <Switch>
 

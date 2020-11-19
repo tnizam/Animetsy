@@ -39,7 +39,8 @@
     border-bottom-left-radius: 300px;
     border-top-right-radius: 300px;
     border-bottom-right-radius: 300px;
-    position: relative;
+    /* position: relative; */
+    position: static;
     display: flex;
     min-width: 50px;
     right: 50px;

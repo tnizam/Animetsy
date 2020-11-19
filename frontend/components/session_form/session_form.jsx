@@ -5,19 +5,21 @@ class SessionForm extends React.Component {
         this.state = {
             first_name: "",
             email: "",
-            password: ""
+            password: "",
+            
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
 
-    handleDemoSubmit() {
+    handleDemoSubmit(e) {
+        e.preventDefault();
         const user = {
             email: 'demoUser@gmail.com',
             password: 'password'
         }
-        this.props.processForm(user);
+        this.props.processForm(user).then(this.props.closeModal);
     }
 
     update(field) {
@@ -45,6 +47,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
+        // debugger
         const signUp = () => (
             <div className="login-form-box">
                 <form onSubmit={this.handleSubmit}>
@@ -80,8 +83,8 @@ class SessionForm extends React.Component {
                 </form>
             </div>
         )
-
         const logIn = () => (
+
             <div className="login-form-box">
                 <form onSubmit={this.handleSubmit} className="form-style">
                     <h1 className="form-header">Sign in</h1>
@@ -109,7 +112,7 @@ class SessionForm extends React.Component {
                     <br/>
                 </form>
                 <button onClick={this.handleDemoSubmit}
-                        className="form-button">Demo Signin</button>
+                        className="demo-button">Demo Signin</button>
             </div>
         )
     

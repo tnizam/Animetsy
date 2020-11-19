@@ -68,6 +68,11 @@
   /* display: inherit; */
 }
 
+.input-body {
+  position: relative;
+  bottom: 30px;
+}
+
 .form-header {
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-size: 20px;
@@ -90,10 +95,37 @@
   border-bottom-left-radius: 300px;
   border-top-right-radius: 300px;
   border-bottom-right-radius: 300px;
-  width: 390px;
+  width: 395px;
   height: 50px;
   margin-top: 30px;
   /* border-top-width: 100px;  */
+  position: relative;
+  bottom: 30px;
+  
+}
+
+.demo-button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  margin: 4px 2px;
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+  width: 395px;
+  height: 50px;
+  margin-top: 10px;
+  /* border-top-width: 100px;  */
+  position: relative;
+  bottom: 30px;
   
 }
 

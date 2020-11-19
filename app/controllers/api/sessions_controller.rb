@@ -4,6 +4,7 @@ class Api::SessionsController < ApplicationController
             params[:user][:email],
             params[:user][:password]
         )
+        # debugger
 
         if @user.nil?
             render json: ["Invalid username/password combination"], status: 401

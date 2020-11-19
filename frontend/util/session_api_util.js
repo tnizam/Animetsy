@@ -7,15 +7,12 @@ export const signup = (user) => {
 }
 
 export const login = (user) => {
-    // debugger
+    // debugger;
     return $.ajax({
         method: "POST",
         url: "/api/session",
         data: { user },
-        // success: data => {
-        //     debugger
-        //     console.log(data)
-        // }
+
     })
 }
 

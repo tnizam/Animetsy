@@ -7,16 +7,19 @@ import { openModal, closeModal } from '../../actions/modal_action';
 
 
 const mSTP = ({errors}) => {
+    // debugger
     return {
         errors: errors.session,
         formType: 'login',
-        navLink: <Link to="/signup">why not sign up?</Link>
+        // navLink: <Link to="/signup">why not sign up?</Link>
     };
 };
 
 const mDTP = dispatch => {
     return {
-        processForm: (user) => dispatch(login(user)),
+        processForm: (user) => {
+            // debugger;
+            dispatch(login(user))},
         otherForm: (
             <button onClick={() => dispatch(openModal('signup'))}>
                 Signup
