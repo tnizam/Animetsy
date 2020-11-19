@@ -2,13 +2,13 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({currentUser, logout}) => {
+const Greeting = ({currentUser, logout, openModal}) => {
 
-    const LoggedOut = () => (
-        <div>
-            <Link to="/login">Login</Link>,
-            <Link to="/signup">Sign Up</Link>
-        </div>
+    const sessionLinks = () => (
+        <nav className="login-signup">
+            <button onClick={() => openModal('login')}>Login</button>
+            <button onClick={() => openModal('signup')}>Signup</button>
+        </nav>
     );
 
     const LoggedIn = () => (
@@ -17,11 +17,12 @@ const Greeting = ({currentUser, logout}) => {
             <button onClick={logout}>Logout</button>
         </div>
     )
-    if (currentUser) {
-        return LoggedIn();
-    } else {
-        return LoggedOut();
-    };
+
+    return (
+        currentUser ?
+            LoggedIn(currentUser, logout) :
+            sessionLinks()
+    );
     
 
 };
