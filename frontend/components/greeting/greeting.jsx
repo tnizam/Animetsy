@@ -6,10 +6,10 @@ const Greeting = ({currentUser, logout, openModal}) => {
 
     const sessionLinks = () => (
         <header >
-            <div class="main-nav">
+            <div className="main-nav">
                 <img src={window.logourl} className="logo" width="160px" height="40px"/>
 
-                <div className>
+                <div>
                     <input className="search-bar" type="text" placeholder="Search"/>
                 </div>
 
@@ -29,10 +29,10 @@ const Greeting = ({currentUser, logout, openModal}) => {
 
     const LoggedIn = () => (
         <header >
-            <div class="main-nav">
+            <div className="main-nav">
                 <img src={window.logourl} className="logo" width="160px" height="40px"/>
 
-                <div className>
+                <div>
                     <input className="search-bar" type="text" placeholder="Search"/>
                 </div>
 
