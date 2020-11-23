@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
+import ProductIndexContainer from "../product/product_index_container";
 
 const Greeting = ({currentUser, logout, openModal}) => {
 
     const sessionLinks = () => (
-        <header >
+        <div>
             <div className="main-nav">
                 <img src={window.logourl} className="logo" width="160px" height="40px"/>
 
@@ -23,12 +24,13 @@ const Greeting = ({currentUser, logout, openModal}) => {
                 <br/>
                 <h2 className="font-style">Find things you'll love. Support independent sellers. Only on Animetsy.</h2>
             </div>
-        </header>
+
+        </div>
         
     );
 
     const LoggedIn = () => (
-        <header >
+        <div >
             <div className="main-nav">
                 <img src={window.logourl} className="logo" width="160px" height="40px"/>
 
@@ -48,7 +50,7 @@ const Greeting = ({currentUser, logout, openModal}) => {
             </div>
 
 
-        </header>
+        </div>
         
     )
 

@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from './store/store';
 import Root from "./components/root"
-import { login, logout, signup } from "./actions/session_actions";
 
+//test import
+import { login, logout, signup } from "./actions/session_actions";
+import { allProducts, eachProduct } from "./actions/product_actions"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // remeber to comment out!
   window.$ = $;
+  window.allProducts = allProducts;
+  window.eachProduct = eachProduct;
   window.login = login;
   window.logout = logout;
   window.signup = signup;

@@ -1,0 +1,2 @@
+class CreateReview < ApplicationRecord
+end

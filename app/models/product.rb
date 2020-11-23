@@ -14,6 +14,8 @@ class Product < ApplicationRecord
     validates :seller_id, presence: true, uniqueness: true
     validates :product_name, :description, :price, presence: true
 
+    has_one_attached :photo
+
     belongs_to :user,
         foreign_key: :seller_id,
         class_name: :User

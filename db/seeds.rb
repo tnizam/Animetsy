@@ -6,10 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Product.destroy_all
+
 demo = User.create(
     first_name: 'Demo User',
     email: 'demoUser@gmail.com',
     password_digest: BCrypt::Password.create('password'),
     session_token: SecureRandom.base64
 )
+
+pro1 = Product.create({product_name: "totoro terrarium", description: "handmade totoro terrarium", price: 30, seller_id: 1});
+pro1.photo.attach(io: File.open('app/assets/images/totoro-terr.jpg'), filename: 'totoro-terr.jpg');
+
 
