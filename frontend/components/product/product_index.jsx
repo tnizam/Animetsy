@@ -28,8 +28,8 @@ class productIndex extends React.Component {
         const {products} = this.props;
 
         return (
-            <div>
-                <ul>
+            <div className="all-images">
+                <ul className="img-testing">
                     {
                       products.map(product => <ProductIndexItem
                         product={product}

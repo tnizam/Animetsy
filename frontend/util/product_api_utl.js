@@ -11,3 +11,4 @@ export const eachProduct = (productId) => {
         url: `/api/products/${productId}`
     })
 };
+

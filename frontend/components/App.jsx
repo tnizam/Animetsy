@@ -19,6 +19,12 @@ const App = () => (
             <Route exact path="/" component={ProductIndexContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
         </Switch>
+
+        <div className="footer-blank"></div>
+        <footer className="footer">
+            <img src={window.bannerurl} className="footer-banner"/>
+            <p>United States | English(US) | $(USD)</p>
+        </footer>
     </div>
 );
 

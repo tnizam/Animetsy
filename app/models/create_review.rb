@@ -1,2 +1,0 @@
-class CreateReview < ApplicationRecord
-end

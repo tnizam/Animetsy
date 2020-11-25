@@ -1,0 +1,19 @@
+.footer{
+    position: relative;
+    left: 0;
+    /* padding-top: 8px; */
+    padding-bottom: 8px;
+    width: 100%;  
+    background-color: #232347;
+    color: white;
+    text-align: center;
+}
+
+.footer-banner {
+    height: 420px;
+    width: 100%;
+}
+
+.footer-blank {
+    height: 200px;
+}

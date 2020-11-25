@@ -11,7 +11,7 @@
 #  updated_at   :datetime         not null
 #
 class Product < ApplicationRecord
-    validates :seller_id, presence: true, uniqueness: true
+    validates :seller_id, presence: true
     validates :product_name, :description, :price, presence: true
 
     has_one_attached :photo
@@ -19,4 +19,10 @@ class Product < ApplicationRecord
     belongs_to :user,
         foreign_key: :seller_id,
         class_name: :User
+
+    has_many :reviews,
+        foreign_key: :product_id,
+        class_name: :Review
+
+    
 end

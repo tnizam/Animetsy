@@ -6,7 +6,7 @@ import Root from "./components/root"
 //test import
 import { login, logout, signup } from "./actions/session_actions";
 import { allProducts, eachProduct } from "./actions/product_actions"
-
+import { createReview, fetchReviews } from "./util/review_api_util"
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // remeber to comment out!
   window.$ = $;
+  window.fetchReviews = fetchReviews;
+  window.createReview = createReview;
   window.allProducts = allProducts;
   window.eachProduct = eachProduct;
   window.login = login;

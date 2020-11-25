@@ -22,7 +22,7 @@ class ProductShow extends React.Component {
         // debugger;
         return (
             <div>
-                <img src={product.photoUrl} />
+                <img src={product.photoUrl} width="200px" height="100px"/>
                 <h2>{product.product_name}</h2>
                 <h3>${product.price}</h3>
             </div>
