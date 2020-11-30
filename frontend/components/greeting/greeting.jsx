@@ -2,56 +2,35 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
 import ProductIndexContainer from "../product/product_index_container";
+import Banner from '../banner/banner'
 
 const Greeting = ({currentUser, logout, openModal}) => {
 
     const sessionLinks = () => (
-        <div>
+        
+        <div className="site-container">
             <div className="main-nav">
-                <img src={window.logourl} className="logo" width="160px" height="40px"/>
+                <Link to={"/"}>
+                    <img src={window.logourl} className="logo" width="160px" height="40px"/>
+                </Link>
 
-                <div>
-                    <input className="search-bar" type="text" placeholder="Search"/>
+                
+                <div className="search">
+                    <div className="search-wrapper">
+                        <form action="#" className="search-form">
+                            <div className="search-container">
+                                <input className="search-input" type="text" placeholder="Search"/>
+                                {/* <input className="search-submit" type="submit" value="&#10140;"/> */}
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
                 <nav className="login-signup">
-                    <button onClick={() => openModal('login')}>Login</button>
+                    <button className="button" onClick={() => openModal('login')}>Login</button>
                     <br/>
-                    <button onClick={() => openModal('signup')}>Signup</button>
+                    <button className="button" onClick={() => openModal('signup')}>Signup</button>
                 </nav>
             </div>
-            <div className="top-banner">
-                <br/>
-                <h2 className="font-style">Find things you'll love. Support independent sellers. Only on Animetsy.</h2>
-                <br/>
-                <div className="anime-row">
-                    <div className="image-text">
-                        <img src={window.aniurl} className="anime-category" />
-                        <h3 className="anime-name">Haikyu</h3>
-                    </div>
-                    <div className="image-text">
-                        <img src={window.aniurl2} className="anime-category"/>
-                        <h3 className="anime-name">HunterXHunter</h3>
-                    </div>
-                    <div className="image-text">
-                        <img src={window.aniurl3} className="anime-category"/>
-                        <h3 className="anime-name">My Hero Academia</h3>
-                    </div>
-                    <div className="image-text">
-                        <img src={window.aniurl4} className="anime-category"/>
-                        <h3 className="anime-name">Naruto</h3>
-                    </div>
-                    <div className="image-text">
-                        <img src={window.aniurl5} className="anime-category" />
-                        <h3 className="anime-name">Tokyo Ghoul</h3>
-                    </div>
-                    <div className="image-text">
-                        <img src={window.aniurl6} className="anime-category" />
-                        <h3 className="anime-name">One Piece</h3>
-                    </div>
-                </div>
-            </div>
-
 
 
         </div>
@@ -61,22 +40,30 @@ const Greeting = ({currentUser, logout, openModal}) => {
     const LoggedIn = () => (
         <div >
             <div className="main-nav">
-                <img src={window.logourl} className="logo" width="160px" height="40px"/>
-
-                <div>
-                    <input className="search-bar" type="text" placeholder="Search"/>
+                <Link to={"/"}>
+                    <img src={window.logourl} className="logo" width="160px" height="40px"/>
+                </Link>
+                <div className="search">
+                    <div className="search-wrapper">
+                        <form action="#" className="search-form">
+                            <div className="search-container">
+                                <input className="search-input" type="text" placeholder="Search" />
+                                {/* <input className="search-submit" type="submit" value="&#10140;"/> */}
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <nav>
                     <div>
-                        <button onClick={logout}>Logout</button>
+                        <button className="button" onClick={logout}>Logout</button>
                     </div>
                 </nav>
             </div>
-            <div className="top-banner">
+            {/* <div className="top-banner">
                 <br/>
-                <h2 className="font-style">Find things you'll love. Support independent sellers. Only on Animetsy.</h2>
-            </div>
+                <h2 className="font-style">Welcome Back!</h2>
+            </div> */}
 
 
         </div>

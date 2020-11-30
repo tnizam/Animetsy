@@ -7,6 +7,8 @@ import ProductShowContainer from "./product/product_show_container";
 import {Route, Switch} from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
+import Banner from './banner/banner'
+import SplashContainer from './splash/splash_container'
 
 const App = () => (
     <div>
@@ -16,14 +18,15 @@ const App = () => (
             
         </header>
         <Switch>
-            <Route exact path="/" component={ProductIndexContainer} />
+            {/* <Route exact path="/" component={ProductIndexContainer} /> */}
+            <Route exact path="/" component={SplashContainer } />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
+            
         </Switch>
 
         <div className="footer-blank"></div>
         <footer className="footer">
-            <img src={window.bannerurl} className="footer-banner"/>
-            <p>United States | English(US) | $(USD)</p>
+            <p className="footer-tag">United States | English(US) | $(USD)</p>
         </footer>
     </div>
 );

@@ -20,11 +20,11 @@ class User < ApplicationRecord
 
     has_many :products,
         foreign_key: :seller_id,
-        class_name: :Product
+        class_name: 'Product'
 
     has_many :reviews,
         foreign_key: :author_id,
-        class_name: :Review
+        class_name: 'Review'
 
     attr_reader :password 
     after_initialize :ensure_session_token

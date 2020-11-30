@@ -52,36 +52,36 @@ class SessionForm extends React.Component {
     render() {
         // debugger
         const signUp = () => (
-            <div className="login-form-box">
+            <div className="signup-form-box">
                 <form onSubmit={this.handleSubmit}>
-                    <h1 className="form-header">Sign Up</h1>
+                    <h1 className="signup-form-header">Sign Up</h1>
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
-                    
-                    <label className="input-header">Email
+                    <div className="signup-container">
+                    <label className="signup-input-header">Email
                         <input type="text"
                             value={this.state.email}  
                             onChange={this.update('email')}
-                            className="submit-box"  
+                            className="signup-submit-box"  
                         />
                     </label>
-                    <label className="input-header">First Name
+                    <label className="signup-input-header">First Name
                         <input type="text"
                             value={this.state.first_name}
                             onChange={this.update('first_name')}
-                            className="submit-box"
+                            className="signup-submit-box"
                         />
                     </label>
-                    <label className="input-header">Password
+                    <label className="signup-input-header">Password
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
-                            className="submit-box"
+                            className="signup-submit-box"
                         />
                     </label>
-                    
+                    </div>
                     <button onClick={this.handleSubmit}
-                        className="form-button">Sign Up</button>
+                        className="signup-form-button">Sign Up</button>
                     <br/>
                 </form>
             </div>

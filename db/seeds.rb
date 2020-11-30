@@ -14,35 +14,35 @@ demo = User.create(
     password: 'password'
 )
 
-pro1 = Product.create({product_name: "Pokemon Terrarium", description: "handmade pokemon terrarium", price: 30, seller_id: 1});
-pro1.photo.attach(io: File.open('app/assets/images/totoro-terr.jpg'), filename: 'totoro-terr.jpg');
+pro1 = Product.create({product_name: "Holographic haku sticker", description: "handmade Holographic haku sticker", price: 10, seller_id: 1});
+pro1.photo.attach(io: File.open('app/assets/images/haku.jpg'), filename: 'haku.jpg');
 
-pro2 = Product.create({product_name: "Totoro Terrarium", description: "handmade totoro terrarium", price: 30, seller_id: 2});
-pro2.photo.attach(io: File.open('app/assets/images/poke-terr.jpg'), filename: 'poke-terr.jpg');
+pro2 = Product.create({product_name: "Haikyuu Custom Hightop", description: "handmade Haikyuu Custom Hightop", price: 60, seller_id: 2});
+pro2.photo.attach(io: File.open('app/assets/images/hk.jpg'), filename: 'hk.jpg');
 
-pro3 = Product.create({product_name: "Pokeball Espeon Terrarium", description: "Handmade Pokeball Espeon Terrarium", price: 50, seller_id: 3});
-pro3.photo.attach(io: File.open('app/assets/images/espeon.jpg'), filename: 'espeon.jpg');
+pro3 = Product.create({product_name: "Jujutsu Kaisen T-shirt", description: "Handmade Jujutsu Kaisen T-shirt", price: 30, seller_id: 3});
+pro3.photo.attach(io: File.open('app/assets/images/jk.jpg'), filename: 'jk.jpg');
 
-pro4 = Product.create({product_name: "Pokeball Flareon Terrarium", description: "Handmade Pokeball Flareon Terrarium", price: 50, seller_id: 1});
-pro4.photo.attach(io: File.open('app/assets/images/flareon.jpg'), filename: 'flareon.jpg');
+pro4 = Product.create({product_name: "Spirited Away Poster", description: "Printed Spirited Away Poster", price: 15, seller_id: 1});
+pro4.photo.attach(io: File.open('app/assets/images/sa.jpg'), filename: 'sa.jpg');
 
-pro5 = Product.create({product_name: "Pokeball glaceon Terrarium", description: "Handmade Pokeball glaceon Terrarium", price: 50, seller_id: 1});
-pro5.photo.attach(io: File.open('app/assets/images/glaceon.jpg'), filename: 'glaceon.jpg');
+pro5 = Product.create({product_name: "DIY Aqua Terrarium Kit", description: "Handmade DIY Aqua Terrarium Kit", price: 35, seller_id: 1});
+pro5.photo.attach(io: File.open('app/assets/images/sa2.jpg'), filename: 'sa2.jpg');
 
-pro6 = Product.create({product_name: "Pokeball jolteon Terrarium", description: "Handmade Pokeball jolteon Terrarium", price: 50, seller_id: 1});
-pro6.photo.attach(io: File.open('app/assets/images/jolteon.jpg'), filename: 'jolteon.jpg');
+pro6 = Product.create({product_name: "BATH HOUSE from Spirited Away", description: "Handmade BATH HOUSE from Spirited Away -- paper model", price: 50, seller_id: 1});
+pro6.photo.attach(io: File.open('app/assets/images/sa3.jpg'), filename: 'sa3.jpg');
 
-pro7 = Product.create({product_name: "Pokeball leafeon Terrarium", description: "Handmade Pokeball leafeon Terrarium", price: 50, seller_id: 1});
-pro7.photo.attach(io: File.open('app/assets/images/leafeon.jpg'), filename: 'leafeon.jpg');
+pro7 = Product.create({product_name: "Bottled Spirit Hard Enamel Pins", description: "Handmade Bottled Spirit Hard Enamel Pins", price: 15, seller_id: 1});
+pro7.photo.attach(io: File.open('app/assets/images/sg.jpg'), filename: 'sg.jpg');
 
-pro8 = Product.create({product_name: "Pokeball sylveon Terrarium", description: "Handmade Pokeball sylveon Terrarium", price: 50, seller_id: 1});
-pro8.photo.attach(io: File.open('app/assets/images/sylveon.jpg'), filename: 'sylveon.jpg');
+pro8 = Product.create({product_name: "Tokyo Ghoul Sticker", description: "Handmade Tokyo Ghoul Sticker", price: 5, seller_id: 1});
+pro8.photo.attach(io: File.open('app/assets/images/tg22.jpg'), filename: 'tg22.jpg');
 
-pro9 = Product.create({product_name: "Pokeball umbreon Terrarium", description: "Handmade Pokeball umbreon Terrarium", price: 50, seller_id: 1});
-pro9.photo.attach(io: File.open('app/assets/images/umbreon.jpg'), filename: 'umbreon.jpg');
+pro9 = Product.create({product_name: "Weathering with You Keychain", description: "Handmade Weathering with You Keychain", price: 10, seller_id: 1});
+pro9.photo.attach(io: File.open('app/assets/images/wwy.jpg'), filename: 'wwy.jpg');
 
-pro10 = Product.create({product_name: "Pokeball vaporeon Terrarium", description: "Handmade Pokeball vaporeon Terrarium", price: 50, seller_id: 1});
-pro10.photo.attach(io: File.open('app/assets/images/vaporeon.jpg'), filename: 'vaporeon.jpg');
+pro10 = Product.create({product_name: "Your Name poster", description: "Printed Your Name poster", price: 20, seller_id: 1});
+pro10.photo.attach(io: File.open('app/assets/images/yn.jpg'), filename: 'yn.jpg');
 
 pro11 = Product.create({product_name: "My Hero Academia Face Mask", description: "Handmade My Hero Academia Face Mask", price: 15, seller_id: 1});
 pro11.photo.attach(io: File.open('app/assets/images/mha.jpg'), filename: 'mha.jpg');
@@ -61,3 +61,15 @@ pro15.photo.attach(io: File.open('app/assets/images/tg.jpg'), filename: 'tg.jpg'
 
 pro16 = Product.create({product_name: "One Piece Pin", description: "Handmade One Piece Pin", price: 10, seller_id: 1});
 pro16.photo.attach(io: File.open('app/assets/images/op.jpg'), filename: 'op.jpg');
+
+pro17 = Product.create({product_name: "Your Name Pin", description: "Handmade Your Name Pin", price: 10, seller_id: 1});
+pro17.photo.attach(io: File.open('app/assets/images/yn3.jpg'), filename: 'yn3.jpg');
+
+pro18 = Product.create({product_name: "Embroidered Pixelated Pokemon Eevee Cap", description: "Handmade Embroidered Pixelated Pokemon Eevee Cap", price: 20, seller_id: 1});
+pro18.photo.attach(io: File.open('app/assets/images/ec.jpg'), filename: 'ec.jpg');
+
+pro19 = Product.create({product_name: "Pokemon Eevee pin", description: "Handmade Pokemon Eevee pin", price: 15, seller_id: 1});
+pro19.photo.attach(io: File.open('app/assets/images/pk.jpg'), filename: 'pk.jpg');
+
+pro20 = Product.create({product_name: "Kitty Boba Pin", description: "Handmade Kitty Boba Pin", price: 10, seller_id: 1});
+pro20.photo.attach(io: File.open('app/assets/images/kb.jpg'), filename: 'kb.jpg');

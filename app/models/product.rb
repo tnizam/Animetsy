@@ -18,11 +18,11 @@ class Product < ApplicationRecord
 
     belongs_to :user,
         foreign_key: :seller_id,
-        class_name: :User
+        class_name: 'User'
 
     has_many :reviews,
         foreign_key: :product_id,
-        class_name: :Review
+        class_name: 'Review'
 
     
 end

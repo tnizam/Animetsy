@@ -1,19 +1,6 @@
 import React from 'react';
 import ProductIndexItem from './product_index_item';
 
-// const productIndex = ({ products }) => {
-    
-//     return (
-//     <div>
-//         {products.map(product => (
-//             <productIndexItem
-//                 product={product}
-//                 key={product.id}
-//             />
-//         ))}
-//     </div>
-//     )
-// };
 
 class productIndex extends React.Component {
     constructor(props) {
@@ -37,6 +24,7 @@ class productIndex extends React.Component {
                       />)
                     }
                 </ul>
+                <div className='blank'></div>
             </div>
         )
     }

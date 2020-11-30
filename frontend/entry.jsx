@@ -6,7 +6,7 @@ import Root from "./components/root"
 //test import
 import { login, logout, signup } from "./actions/session_actions";
 import { allProducts, eachProduct } from "./actions/product_actions"
-import { createReview, fetchReviews } from "./util/review_api_util"
+import { createReview, fetchReviews } from "./actions/review_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
 

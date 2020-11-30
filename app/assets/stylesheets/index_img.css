@@ -22,6 +22,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 83%;
+  align-items: center;
+  position: relative;  
+  left: 6.4%;
+    
 }
 
 
@@ -62,4 +67,8 @@
 
 .all-images {
   justify-content: center;
+}
+
+.blank {
+  height: 200px;
 }

@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 20px;    
 }
 
 .font-style{
@@ -27,14 +27,20 @@
     
 }
 
+.banner-container {
+    width: 83%;
+    align-items: center;
+    position: relative;
+
+}
+
 .anime-row {
     background-color: #2E766D;
     display: flex;
     flex-wrap: wrap;
     vertical-align: middle;
-    align-items: flex-end;
-    
-
+    align-items: center;
+    justify-content: center;
 }
 .anime-name{
     text-align: center;

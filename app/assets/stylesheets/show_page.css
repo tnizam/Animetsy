@@ -1,0 +1,98 @@
+
+.product-container {
+    display: flex;
+    align-items: center;
+}
+
+.pro-image {
+    width: 577px;
+    height: 577px;
+    padding-top: 45px;
+    padding-right: 65px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+
+.product-container {
+      /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 83%;
+  /* align-items: center; */
+  position: relative;  
+  left: 6.4%;
+}
+
+.cart-button {
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    width: 252px;
+    height: 44px;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+.product-name-show {
+    font-size: 35px;
+    font-family: serif;
+    /* font-family: "Guardian-EgypTT",serif; */
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+.price-show {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.des-tag {
+    margin-top: 36px;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-bottom: -3px;
+}
+
+.description {
+    font-size: 17px;
+    margin-top: 12px;
+    font-family: sans-serif;
+}
+
+.dropdown-content {
+margin: 0;
+    padding: 0 0.75em 0 0;
+    width: 235px;
+    height: 32px;
+    margin-bottom: 11px;
+    margin-left: 4px;
+    border: 4px;
+    box-shadow: none;
+    background: none;
+    outline: solid;
+    -moz-border-radius: 0px;
+    border-radius: 3px;
+}
+
+.dropdown-content:focus {
+    	outline: none;
+	border: none;
+}
+
+.dropdown-content:hover {
+    cursor: pointer;
+}
+

@@ -13,3 +13,12 @@ export const createReview = (review, productId) => {
         data: { review }
     })
 }
+
+
+// export const createReview = (review) => {
+//     return $.ajax({
+//         method: 'POST',
+//         url: `/api/products/${review.product_id}/reviews`,
+//         data: { review }
+//     })
+// }
