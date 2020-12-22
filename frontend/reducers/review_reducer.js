@@ -10,7 +10,8 @@ const ReviewsReducer = (oldState = {}, action) => {
         case RECEIVE_REVIEW:
             // debugger;
             // nextState[action.reviewId] = action.review;
-            return merge({}, oldState, [action.review.id] = action.review);
+            // return merge({}, oldState, [action.review.id] = action.review);
+            return Object.assign({}, oldState, action.review);    
 
         default:
             return oldState;

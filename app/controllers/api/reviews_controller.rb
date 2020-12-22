@@ -5,8 +5,6 @@ class Api::ReviewsController < ApplicationController
     def index
         # debugger;
         if params[:product_id]
-            # product = Product.find(params[:product_id]);
-            # @reviews = Review.where(product_id: params[:productId]).includes(:author)
             @reviews = Review.where(product_id: params[:product_id])
 
         else
@@ -16,17 +14,23 @@ class Api::ReviewsController < ApplicationController
         render :index;
     end
 
-    def create
+    def show 
+        @review = Review.find(params[:id]);
+    end
 
-        # if logged_in?
+    def create
+        # debugger;
+        if logged_in?
             @review = Review.new(review_params);
+            @review.author_id = current_user.id
+            @review.product_id = params[:product_id]
 
             if @review.save
                 render :show
             else 
                 render json: @review.errors.full_messages, status: 422
             end
-        # end
+        end
     end
 
     private

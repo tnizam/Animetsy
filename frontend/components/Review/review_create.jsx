@@ -8,9 +8,9 @@ class ReviewCreate extends React.Component {
         
         this.state = {
             body: '',
-            rating: 1
-            // productId: this.props.review.productId,
-            // authorId: this.props.review.authorId
+            rating: 1,
+            productId: this.props.productId,
+            authorId: this.props.review.authorId
         };
 
         // this.state.review;
@@ -19,20 +19,14 @@ class ReviewCreate extends React.Component {
     }
 
     handleSubmit(e) {
+
         e.preventDefault();
-        // // const productId = parseInt(this.props.match.params.productId);
-        // // let review = Object.assign({}, this.state, {
-        // //     product_id: productId
-        // // });
-        // // this.props.createReview(review);
-
-        // const review = this.state;
-        // this.setState({review:""});
-        // // this.props.createReview(review, this.props.review.productId);
-        // this.props.createReview(review);
-
-        this.props.createReview(this.state, this.props.productId);
-        this.setState({body: "", rating: 1});
+        const productId = this.props.match.params.productId;
+        const review = Object.assign({}, this.state, {
+            product_id: productId
+        });
+        this.props.createReview(review, productId);
+        // this.navProductShow();
 
     }
 

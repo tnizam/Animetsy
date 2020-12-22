@@ -26,13 +26,6 @@ export const fetchReviews = (productId) => dispatch => {
     ))
 };
 
-// export const fetchReview = (productId, reviewId) => dispatch => {
-//     return ReviewAPIUtil.fetchReview(productId, reviewId).then((reviewId) => (
-//         dispatch(receiveReviews(reviewId))
-//     ), errors => (
-//     dispatch(receiveReviewErrors(errors.responseJSON))
-//     ))
-// };
 
 export const createReview = (review, productId) => dispatch => {
     return ReviewAPIUtil.createReview(review, productId).then((review) => (
@@ -41,14 +34,3 @@ export const createReview = (review, productId) => dispatch => {
         dispatch(receiveReviewErrors(errors.responseJSON))
     ))
 };
-
-
-// export const createReview = (review) => dispatch => {
-//     return ReviewAPIUtil.createReview(review).then((review) => (
-//         dispatch(receiveReview(review))
-//     ), errors => (
-//         dispatch(receiveReviewErrors(errors.responseJSON))
-//     ))
-// };
-
-
