@@ -1,6 +1,7 @@
 import React from 'react';
 import Rating from 'react-rating'
 import { withRouter } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 class ReviewCreate extends React.Component {
     constructor(props) {
@@ -34,6 +35,11 @@ class ReviewCreate extends React.Component {
         return e => this.setState({ [property]: e.currentTarget.value });
     }
 
+
+        componentDidMount() {
+            setState(review)
+        }
+
     render () {
         const { review } = this.props;
         if (!review) {
@@ -43,10 +49,12 @@ class ReviewCreate extends React.Component {
         return (
             <form onSubmit={this.handleSubmit} className='submit-form'>
                 <Rating
-                    initialRating={this.state.rating}
+                    value={this.state.rating}
                     emptySymbol="far fa-star"
                     fullSymbol="fas fa-star"
-                    onChange={this.update('rating')}
+                    // onChange={this.update('rating')}
+                    onClick={this.update('rating')}
+
                 />
                 <textarea 
                     value={this.state.body}
