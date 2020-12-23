@@ -16,6 +16,7 @@ class ReviewCreate extends React.Component {
 
         // this.state.review;
         this.update = this.update.bind(this);
+        this.updateReview = this.updateReview.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -31,14 +32,13 @@ class ReviewCreate extends React.Component {
 
     }
 
+    updateReview(property) {
+        return e => this.setState({ [property]: e})
+    }
+
     update(property) {
         return e => this.setState({ [property]: e.currentTarget.value });
     }
-
-
-        componentDidMount() {
-            setState(review)
-        }
 
     render () {
         const { review } = this.props;
@@ -49,13 +49,12 @@ class ReviewCreate extends React.Component {
         return (
             <form onSubmit={this.handleSubmit} className='submit-form'>
                 <Rating
-                    value={this.state.rating}
+                    initialRating={this.state.rating}
                     emptySymbol="far fa-star"
                     fullSymbol="fas fa-star"
-                    // onChange={this.update('rating')}
-                    onClick={this.update('rating')}
-
+                    onChange={this.updateReview('rating')}
                 />
+                
                 <textarea 
                     value={this.state.body}
                     onChange={this.update('body')}

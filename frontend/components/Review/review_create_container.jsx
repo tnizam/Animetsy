@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => {
     return {
-        // product: state.entities.products[ownProps.match.params.productId]
         review: {
             authorId: state.session.id,
             body: " ",

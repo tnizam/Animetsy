@@ -8,7 +8,7 @@ const ReviewIndexItem = ({review}) => {
         <div>
 
             <Rating
-                value={review.rating}
+                initialRating={review.rating}
                 emptySymbol="far fa-star"
                 fullSymbol="fas fa-star"
                 readonly={true}
