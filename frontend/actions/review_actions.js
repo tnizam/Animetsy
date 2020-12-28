@@ -8,9 +8,10 @@ const receiveReviews = (reviews) => ({
     type: RECEIVE_REVIEWS,
     reviews
 });
-const receiveReview = review => ({
+const receiveReview = ({review, author}) => ({
     type: RECEIVE_REVIEW,
-    review
+    review,
+    author
 });
 
 const receiveReviewErrors = errors => ({
