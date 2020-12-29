@@ -17,15 +17,15 @@ export const createCartItem = (cartItem) => {
     return $.ajax({
         method: 'POST',
         url: '/api/cart_items',
-        data: { cartItem }
+        data: { cart_item: cartItem }
     })
 };
 
-export const updateCartItem = (cartItem, id) => {
+export const updateCartItem = (cartItem, cartItemId) => {
     return $.ajax({
         method: 'PATCH',
-        url: `/api/cart_items/${id}`,
-        data: { cartItem }
+        url: `/api/cart_items/${cartItemId}`,
+        data: { cart_item: cartItem }
     })
 };
 
