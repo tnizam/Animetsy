@@ -6,7 +6,9 @@ import Root from "./components/root"
 //test import
 import { login, logout, signup } from "./actions/session_actions";
 import { allProducts, eachProduct } from "./actions/product_actions"
-import { createReview, fetchReviews } from "./actions/review_actions"
+// import { createReview, fetchReviews } from "./actions/review_actions";
+import { createReview, fetchReviews } from "./util/review_api_util";
+import { createCartItem, destroyCartItem, fetchCartItems, updateCartItem } from "./util/cart_item_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -27,8 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
 
-  // remeber to comment out!
+  // remember to comment/DELETEEEE out!
   window.$ = $;
+  window.fetchCartItems = fetchCartItems;
+  window.createCartItem = createCartItem;
+  window.updateCartItem = updateCartItem;
+  window.destroyCartItem = destroyCartItem;
+
   window.fetchReviews = fetchReviews;
   window.createReview = createReview;
   window.allProducts = allProducts;
@@ -40,3 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   
 });
+//window.createReview({body: "greatttt", rating: 5, product_id: 32, author_id: 1}, 32)
