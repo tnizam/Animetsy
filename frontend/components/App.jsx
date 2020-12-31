@@ -22,7 +22,7 @@ const App = () => (
             {/* <Route exact path="/" component={ProductIndexContainer} /> */}
             <Route exact path="/" component={SplashContainer } />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
-            <Route exact path="/cartItems" component={CartItemContainer} />
+            <Route exact path="/cart" component={CartItemContainer} />
         </Switch>
 
         <div className="footer-blank"></div>
