@@ -1,4 +1,6 @@
-import {} from '../actions/cart_item_actions'
+import {RECEIVE_CART_ITEMS, 
+        RECEIVE_CART_ITEM,
+        REMOVE_CART_ITEM} from '../actions/cart_item_actions'
 
 const cartItemReducer = (oldState = {}, action) => {
     let nextState = Object.assign({}, oldState);
@@ -13,7 +15,7 @@ const cartItemReducer = (oldState = {}, action) => {
             delete nextState[action.cartItem.id];
             return nextState;
         default:
-            return state;
+            return oldState;
     }
 }
 
