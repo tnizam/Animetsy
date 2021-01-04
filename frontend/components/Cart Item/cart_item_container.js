@@ -4,10 +4,11 @@ import { destroyCartItem, fetchCartItems, updateCartItem } from '../../actions/c
 import { allProducts, eachProduct } from '../../actions/product_actions'
 
 const mSTP = (state, ownProps) => {
-    console.log(state)
+    console.log("state",state)
+    console.log("own", ownProps)
     return {
         cartItems: Object.values(state.entities.cartItems),
-        currentUser: state.entities.users[state.session.id],
+        currentUser: state.entities.users[state.session.id]
         // products: Object.values(state.entities.products),
         // product: state.entities.products[ownProps.match.params.productId]
 
@@ -18,6 +19,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         fetchCartItems: () => dispatch(fetchCartItems()),
+        fetchCartItem: (cartItemId) => dispatch(fetchCartItem(cartItemId)),
+
         // allProducts: () => dispatch(allProducts()),
         // eachProduct: productId => dispatch(eachProduct(productId)),
         updateCartItem: (cartItem, cartItemId) => dispatch(updateCartItem(cartItem, cartItemId)),

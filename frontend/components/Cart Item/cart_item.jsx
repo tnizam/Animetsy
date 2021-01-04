@@ -23,8 +23,6 @@ class CartItem extends React.Component {
                         key={cartItem.id} 
                       />)
                     }
-                    
-\
                 </ul>
  
             </div>

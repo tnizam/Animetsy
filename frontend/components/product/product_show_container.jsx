@@ -9,8 +9,8 @@ const mSTP = (state, ownProps) => {
     // console.log(ownProps)
     const proId = parseInt(ownProps.match.params.productId);
     const pro = state.entities.products[proId];
-    console.log("mstp proid", proId)
-    console.log("mstp pro", pro)
+    // console.log("mstp proid", proId)
+    // console.log("mstp pro", pro)
     return {
         product: state.entities.products[proId],
         cartItems: state.entities.cartItems,

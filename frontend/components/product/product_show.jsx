@@ -7,9 +7,7 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            productId: this.props.productId,
-            quantity: 1,
-            totalCost: this.props
+            quantity: 1
         }
     console.log("prop", this.props)
     console.log("state", this.state)
@@ -25,8 +23,9 @@ class ProductShow extends React.Component {
         e.preventDefault();
 
         const cartItem = {
-            product_id: this.state.productId,
+            product_id: this.props.productId,
             quantity: this.state.quantity,
+            total_cost: this.props.product.price
 
         }
         this.props.createCartItem(cartItem);
@@ -55,7 +54,7 @@ class ProductShow extends React.Component {
 
                         <select className="dropdown-content">
                             <option value="#" selected='selected'>1</option>
-                            <option value="#">2</option>
+                            <option value="#">2</option>›
                             <option value="#">3</option>
                             <option value="#">4</option>
                             <option value="#">5</option>
@@ -63,14 +62,14 @@ class ProductShow extends React.Component {
                         </select>
 
                         
-                        {/* <button className='cart-button'
+                        <button className='cart-button'
                                 onClick={this.handleSubmitToCart}
-                        >Add to cart</button> */}
-                        <form onSubmit={this.handleSubmitToCart}>
+                        >Add to cart</button>
+                        {/* <form onSubmit={this.handleSubmitToCart}>
                             <div>
                                 <h2>${product.price}</h2>
                             </div>
-                        </form>
+                        </form> */}
 
                         <h3 className='des-tag'>Description:</h3>
                         <p className='description'>{product.description}</p>

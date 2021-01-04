@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
+import {destroyCartItem} from '../../actions/cart_item_actions';
 
-const CartIndexItem = ({cartItem}) => {
+const CartIndexItem = ({cartItem, destroyCartItem}) => {
     
     return (
         <div>
@@ -11,8 +13,15 @@ const CartIndexItem = ({cartItem}) => {
             <h2 className="product-name">{cartItem.name}</h2>
             <h2 className="product-price">${cartItem.price}</h2>
             <h2>{cartItem.quantity}</h2>
+            <button onClick={destroyCartItem(cartItem.id)}>Delete</button>
         </div>
     )
 }
 
-export default CartIndexItem;
+const mDTP = dispatch => {
+    return {
+        destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId))
+    }
+}
+
+export default connect(mDTP)(CartIndexItem);
