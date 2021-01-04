@@ -1,6 +1,5 @@
 import React from 'react';
 import CartIndexItem from './cart_item_index';
-import ProductIndexItem from '../product/product_index_item';
 
 class CartItem extends React.Component {
     constructor(props) {
@@ -9,42 +8,23 @@ class CartItem extends React.Component {
 
     componentDidMount() {
         this.props.fetchCartItems();
-        this.props.allProducts();
     }
-
     render() {
-        const {cartItems, products} = this.props;
-        const cartProd = [];
-
-        // products.forEach(product => {
-        //     if(cartItems.productId === product.id) {
-        //         cartProd.push(product)
-        //     }    
-        // })
-
-        console.log("props", this.props.products)
+        console.log("props", this.props)
+        
+        const {cartItems} = this.props;
 
         return (
             <div>
                 <ul>
                     {
-                      cartItems.map((cartItem, product) => <CartIndexItem
+                      cartItems.map((cartItem) => <CartIndexItem
                         cartItem={cartItem}
                         key={cartItem.id} 
-                                                                                                product={product}
-                        key={product.id}
                       />)
                     }
-                    {/* {                      
-                    products.map(product => {
-                          if(product.id === cartItems.productId) {
-                            <ProductIndexItem
-                                product={product}
-                                key={product.id}
-                            />
-                          }
-                      })
-                    } */}
+                    
+\
                 </ul>
  
             </div>

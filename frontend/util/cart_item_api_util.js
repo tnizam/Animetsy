@@ -6,12 +6,12 @@ export const fetchCartItems = () => {
 };
 
 //dont need a show for each product in the cart
-// export const fetchCartItem = (cartItemId) => {
-//     return $.ajax({
-//         method: 'GET',
-//         url: `/api/cart_items/${cartItemId}`
-//     })
-// };
+export const fetchCartItem = (cartItemId) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/cart_items/${cartItemId}`
+    })
+};
 
 export const createCartItem = (cartItem) => {
     return $.ajax({

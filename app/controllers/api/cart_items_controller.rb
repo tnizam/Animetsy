@@ -12,7 +12,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def create
-        debugger
+        # debugger
         # if logged_in?
             # @cart_item = CartItem.new(cart_items_params);
             # @cart_item.buyer_id = current_user.id

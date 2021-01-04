@@ -11,7 +11,7 @@ const ProductIndexItem = ({product}) => {
                         <img src={product.photoUrl} className="direct-img" />
                     </Link>
                 </div>
-                <h2 className="product-name">{product.product_name}</h2>
+                <h2 className="product-name">{product.productName}</h2>
                 <h2 className="product-price">${product.price}</h2>
         </div>
     )
