@@ -13,7 +13,10 @@ const CartIndexItem = ({cartItem, destroyCartItem}) => {
             <h2 className="product-name">{cartItem.name}</h2>
             <h2 className="product-price">${cartItem.price}</h2>
             <h2>{cartItem.quantity}</h2>
-            <button onClick={destroyCartItem(cartItem.id)}>Delete</button>
+            <button onClick={() => 
+                destroyCartItem(cartItem.id).then(() => 
+                window.location.reload())
+            }>Delete</button>
         </div>
     )
 }
@@ -24,4 +27,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mDTP)(CartIndexItem);
+export default connect(null, mDTP)(CartIndexItem);

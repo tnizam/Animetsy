@@ -11,7 +11,9 @@ class ProductShow extends React.Component {
         }
     console.log("prop", this.props)
     console.log("state", this.state)
+        
         this.handleSubmitToCart = this.handleSubmitToCart.bind(this);
+        this.selectQuantity = this.selectQuantity.bind(this);
 };
 
     componentDidMount() {
@@ -26,9 +28,13 @@ class ProductShow extends React.Component {
             product_id: this.props.productId,
             quantity: this.state.quantity,
             total_cost: this.props.product.price
-
         }
-        this.props.createCartItem(cartItem);
+        this.props.createCartItem(cartItem).then(() => 
+        this.props.history.push('/cart'))
+    }
+
+    selectQuantity(quantity) {
+        this.setState({quantity: quantity.target.value})
     }
 
     render () {
@@ -52,12 +58,14 @@ class ProductShow extends React.Component {
                         <h3 className='price-show'>${product.price}</h3>
 
 
-                        <select className="dropdown-content">
-                            <option value="#" selected='selected'>1</option>
-                            <option value="#">2</option>›
-                            <option value="#">3</option>
-                            <option value="#">4</option>
-                            <option value="#">5</option>
+                        <select className="dropdown-content"
+                        onChange={this.selectQuantity}
+                        >
+                            <option value="1" selected='selected'>1</option>
+                            <option value="2">2</option>›
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
 
                         </select>
 

@@ -26,18 +26,4 @@ const ReviewIndexItem = ({review, author}) => {
     )
 };
 
-// const mSTP = ({entities: {users}}, {review}) => {
-//     return {
-//         author: users[review.author_id]
-//     }
-// }
-
-// const mSTP = (state) => {
-//     return {
-//         author: state.entities.users[state.entities.reviews.author_id]
-//     }
-// }
-
-
-// export default (connect(mSTP)(ReviewIndexItem));
 export default withRouter(ReviewIndexItem);

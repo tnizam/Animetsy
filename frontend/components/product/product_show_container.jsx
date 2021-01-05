@@ -15,7 +15,7 @@ const mSTP = (state, ownProps) => {
         product: state.entities.products[proId],
         cartItems: state.entities.cartItems,
         productId: parseInt(ownProps.match.params.productId),
-        products: state.entities.products
+        products: state.entities.products,
         
     }
 };
@@ -24,6 +24,7 @@ const mDTP = dispatch => {
     return {
         allProducts: () => dispatch(allProducts()),
         eachProduct: productId => dispatch(eachProduct(productId)),
+        updateCartItem: (cartItem, cartItemId) => dispatch(updateCartItem(cartItem, cartItemId)),
         createCartItem: (cartItem) => dispatch(createCartItem(cartItem))
     }
 };

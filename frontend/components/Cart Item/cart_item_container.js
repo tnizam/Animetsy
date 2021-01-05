@@ -24,7 +24,7 @@ const mDTP = dispatch => {
         // allProducts: () => dispatch(allProducts()),
         // eachProduct: productId => dispatch(eachProduct(productId)),
         updateCartItem: (cartItem, cartItemId) => dispatch(updateCartItem(cartItem, cartItemId)),
-        destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId))
+        // destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId))
     }
 };
 
