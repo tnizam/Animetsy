@@ -11,8 +11,6 @@ const mSTP = (state, ownProps) => {
         currentUser: state.entities.users[state.session.id]
         // products: Object.values(state.entities.products),
         // product: state.entities.products[ownProps.match.params.productId]
-
-
     };
 };
 
