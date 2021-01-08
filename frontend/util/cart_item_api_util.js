@@ -21,10 +21,18 @@ export const createCartItem = (cartItem) => {
     })
 };
 
-export const updateCartItem = (cartItem, cartItemId) => {
+// export const updateCartItem = (cartItem, cartItemId) => {
+//     return $.ajax({
+//         method: 'PATCH',
+//         url: `/api/cart_items/${cartItemId}`,
+//         data: { cart_item: cartItem }
+//     })
+// };
+
+export const updateCartItem = (cartItem) => {
     return $.ajax({
         method: 'PATCH',
-        url: `/api/cart_items/${cartItemId}`,
+        url: `/api/cart_items/${cartItem.id}`,
         data: { cart_item: cartItem }
     })
 };

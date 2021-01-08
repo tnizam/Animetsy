@@ -45,8 +45,14 @@ export const createCartItem = (cartItem) => dispatch => {
     ))
 };
 
-export const updateCartItem = (cartItem, cartItemId) => dispatch => {
-    return CartItemAPIUtil.updateCartItem(cartItem, cartItemId).then(cartItem => (
+// export const updateCartItem = (cartItem, cartItemId) => dispatch => {
+//     return CartItemAPIUtil.updateCartItem(cartItem, cartItemId).then(cartItem => (
+//         dispatch(receiveCartItem(cartItem))
+//     ))
+// };
+
+export const updateCartItem = (cartItem) => dispatch => {
+    return CartItemAPIUtil.updateCartItem(cartItem).then(cartItem => (
         dispatch(receiveCartItem(cartItem))
     ))
 };

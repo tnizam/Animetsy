@@ -8,9 +8,9 @@ const mSTP = (state, ownProps) => {
     console.log("own", ownProps)
     return {
         cartItems: Object.values(state.entities.cartItems),
-        currentUser: state.entities.users[state.session.id]
-        // products: Object.values(state.entities.products),
-        // product: state.entities.products[ownProps.match.params.productId]
+        currentUser: state.entities.users[state.session.id],
+        // product: state.entities.products[parseInt(ownProps.match.params.productId)],
+        cartItemId: Object.keys(state.entities.cartItems)
     };
 };
 
@@ -19,9 +19,9 @@ const mDTP = dispatch => {
         fetchCartItems: () => dispatch(fetchCartItems()),
         fetchCartItem: (cartItemId) => dispatch(fetchCartItem(cartItemId)),
 
-        // allProducts: () => dispatch(allProducts()),
-        // eachProduct: productId => dispatch(eachProduct(productId)),
-        updateCartItem: (cartItem, cartItemId) => dispatch(updateCartItem(cartItem, cartItemId)),
+       
+        // updateCartItem: (cartItem, cartItemId) => dispatch(updateCartItem(cartItem, cartItemId)),
+        updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
         // destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId))
     }
 };
