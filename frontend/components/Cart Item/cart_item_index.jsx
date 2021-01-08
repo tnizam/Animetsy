@@ -31,10 +31,10 @@
 // //             Update
 // //             </button> */}
 
-// //             <button onClick={() => 
-// //                 destroyCartItem(cartItem.id).then(() => 
-// //                 window.location.reload())
-// //             }>Delete</button>
+            // <button onClick={() => 
+            //     destroyCartItem(cartItem.id).then(() => 
+            //     window.location.reload())
+            // }>Delete</button>
 // //         </div>
 // //     )
 // // }

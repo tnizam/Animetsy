@@ -59,7 +59,8 @@ class ProductShow extends React.Component {
 
 
                         <select className="dropdown-content"
-                        onChange={this.selectQuantity}>
+                        onChange={this.selectQuantity}
+                        >
                             <option value="1" selected='selected'>1</option>
                             <option value="2">2</option>›
                             <option value="3">3</option>

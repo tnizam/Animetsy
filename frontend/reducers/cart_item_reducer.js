@@ -3,8 +3,8 @@ import {RECEIVE_CART_ITEMS,
         REMOVE_CART_ITEM} from '../actions/cart_item_actions'
 
 const cartItemReducer = (oldState = {}, action) => {
-    let nextState = Object.assign({}, oldState);
     Object.freeze(oldState);
+    let nextState = Object.assign({}, oldState);
     switch(action.type) {
         case RECEIVE_CART_ITEMS:
             return action.cartItems;
