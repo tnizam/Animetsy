@@ -25,7 +25,8 @@ class CartItem extends React.Component {
             id: cartItem.id,
             product_id: cartItem.productId,
             total_cost: cartItem.totalCost,
-            quantity: e.target.value 
+            quantity: e.target.value,
+            photoUrl: cartItem.photoUrl
         })
 
     }
@@ -72,7 +73,7 @@ class CartItem extends React.Component {
                                 <h2>{cartItem.quantity}</h2>
 
                                 <select className="dropdown-content"
-                                    value={this.state.quantity}
+                                    value={cartItem.quantity}
                                     id="quanityId"
                                     onChange={this.updateQuantity(cartItem)}
                                 >
