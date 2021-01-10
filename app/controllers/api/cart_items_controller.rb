@@ -42,8 +42,9 @@ class Api::CartItemsController < ApplicationController
     def destroy
         if logged_in?
             @cart_item = CartItem.find(params[:id])
-            @cart_item.destroy
-            render :show
+            if @cart_item.destroy
+                render :show 
+            end
         end
     end
 

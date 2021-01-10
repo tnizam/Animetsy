@@ -8,7 +8,7 @@ class CartItem extends React.Component {
         super(props);
    
         // this.updateQuantity = this.updateQuantity.bind(this);
-        // this.handleDeleteItem = this.handleDeleteItem.bind(this);
+        this.handleDeleteItem = this.handleDeleteItem.bind(this);
     }
 
     handleUpdateQuantity(cartItem) {
@@ -21,6 +21,11 @@ class CartItem extends React.Component {
             photoUrl: cartItem.photoUrl
         })
 
+    }
+
+    handleDeleteItem(e) {
+        e.preventDefault();
+        this.props.destroyCartItem(this.props.cartItemId);
     }
 
     componentDidMount() {
@@ -66,11 +71,12 @@ class CartItem extends React.Component {
                                     <option value="5">5</option>
 
                                 </select>
-
+{/* 
                                 <button onClick={() => 
                                     this.props.destroyCartItem(cartItem.id).then(() => 
                                         window.location.reload())
-                                }>Delete</button>
+                                }>Delete</button> */}
+                                 <button onClick={this.handleDeleteItem}>Delete</button>
                             </div>
 
                         )})

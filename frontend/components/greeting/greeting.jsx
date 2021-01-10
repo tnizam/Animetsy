@@ -25,6 +25,7 @@ const Greeting = ({currentUser, logout, openModal}) => {
                         </form>
                     </div>
                 </div>
+                
                 <nav className="login-signup">
                     <button className="button" onClick={() => openModal('login')}>Login</button>
                     <br/>
