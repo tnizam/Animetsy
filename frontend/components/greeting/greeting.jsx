@@ -1,8 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Link } from 'react-router-dom';
+import { Link, Switch, Route } from 'react-router-dom';
 import ProductIndexContainer from "../product/product_index_container";
 import Banner from '../banner/banner'
+// import SearchContainer from '../search/search_container';
+import SearchBar from '../search/search_bar';
+import SearchShow from '../search/search_show'
+
 
 const Greeting = ({currentUser, logout, openModal}) => {
 
@@ -14,23 +18,25 @@ const Greeting = ({currentUser, logout, openModal}) => {
                     <img src={window.logourl} className="logo" width="160px" height="40px"/>
                 </Link>
 
-                
-                <div className="search">
-                    <div className="search-wrapper">
-                        <form action="#" className="search-form">
-                            <div className="search-container">
-                                <input className="search-input" type="text" placeholder="Search"/>
-                                {/* <input className="search-submit" type="submit" value="&#10140;"/> */}
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
+                <SearchBar/> 
+
+                {/* <SearchContainer/> */}
+                {/* <Switch>
+                    <Route exact path="/search" component={SearchContainer} /> 
+                </Switch> */}
+                <Switch>        
+                    <Route exact path="/search/:searched" component={SearchShow} /> 
+                </Switch> 
+
                 <nav className="login-signup">
                     <button className="button" onClick={() => openModal('login')}>Login</button>
                     <br/>
                     <button className="button" onClick={() => openModal('signup')}>Signup</button>
                 </nav>
+
+                <div>
+                    
+                </div>
             </div>
 
 
@@ -44,16 +50,17 @@ const Greeting = ({currentUser, logout, openModal}) => {
                 <Link to={"/"}>
                     <img src={window.logourl} className="logo" width="160px" height="40px"/>
                 </Link>
-                <div className="search">
-                    <div className="search-wrapper">
-                        <form action="#" className="search-form">
-                            <div className="search-container">
-                                <input className="search-input" type="text" placeholder="Search" />
-                                {/* <input className="search-submit" type="submit" value="&#10140;"/> */}
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                
+                <SearchBar/> 
+                <Switch>        
+                    <Route exact path="/search/:searched" component={SearchShow} /> 
+                </Switch> 
+
+                {/* <SearchContainer/> */}
+
+                {/* <Switch>
+                    <Route exact path="/search" component={SearchContainer} /> 
+                </Switch> */}
 
                 <nav>
                     <div>
@@ -65,7 +72,7 @@ const Greeting = ({currentUser, logout, openModal}) => {
                 <br/>
                 <h2 className="font-style">Welcome Back!</h2>
             </div> */}
-
+                   
 
         </div>
         

@@ -5,7 +5,6 @@ import ProductIndexItem from './product_index_item';
 class productIndex extends React.Component {
     constructor(props) {
         super(props);
-           console.log(this.props)
     }
 
     componentDidMount() {
