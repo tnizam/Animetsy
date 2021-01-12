@@ -24,9 +24,10 @@ class Api::ReviewsController < ApplicationController
             @review = Review.new(review_params);
             @review.author_id = current_user.id
             @review.product_id = params[:product_id]
-
+            
             if @review.save
-                render :show
+                @reviews = Review.all
+                render :index
             else 
                 render json: @review.errors.full_messages, status: 422
             end

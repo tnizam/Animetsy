@@ -22,38 +22,26 @@ class SearchBar extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.history.push(`/search/${this.state.search}`);
-        // this.props.history.push('/search');
     }
 
     render () {
-        // const {products} = this.props;
-        // let searchProducts = this.props.products.filter(
-        //     (product) => {
-        //         return product.productName.toLowerCase().indexOf(
-        //             this.state.search.toLowerCase()) !== -1;
-        //     } 
-        // );
+
         return (
-            // <div className="all-images">
-            //     <ul className="img-testing">
-            //         {
-            //           searchProducts.map(product => <ProductIndexItem
-            //             product={product}
-            //             key={product.id}
-            //           />)
-            //         }
-            //     </ul>
 
-            // </div>
-            <form onSubmit={this.handleSubmit}>
-                <div>
-                    <input type="text"
-                        value={this.state.search}
-                        onChange={this.update} />
+            <div className="search">
+                <div className="search-wrapper">
+                    <form onSubmit={this.handleSubmit} className="search-form">
+                        <div className="search-container">
+                            <input type="text"
+                                value={this.state.search}
+                                onChange={this.update}
+                                className="search-input"/>
+                        </div>
+
+                        <button type='submit'>Search</button>
+                    </form>
                 </div>
-
-                <button type='submit'>Search</button>
-            </form>
+            </div>
         )
     }
 }

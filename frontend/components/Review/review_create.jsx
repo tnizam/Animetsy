@@ -2,6 +2,8 @@ import React from 'react';
 import Rating from 'react-rating'
 import { withRouter } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/js/all.js';
+import ReactStars from "react-rating-stars-component";
+
 
 class ReviewCreate extends React.Component {
     constructor(props) {
@@ -54,6 +56,15 @@ class ReviewCreate extends React.Component {
                     fullSymbol="fas fa-star"
                     onChange={this.updateReview('rating')}
                 />
+                {/* <ReactStars
+                    count={4}
+                    size={15}
+                    activeColor="#ffd700"
+                    value={this.state.rating}
+                    // emptySymbol="far fa-star"
+                    // fullSymbol="fas fa-star"
+                    onChange={this.updateReview('rating')}
+                /> */}
                 
                 <textarea 
                     value={this.state.body}

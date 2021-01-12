@@ -1,5 +1,9 @@
 import React from 'react';
+import Rating from 'react-rating';
 import ReviewIndexItem from './review_index_item';
+
+import ReactStars from "react-rating-stars-component";
+
 
 class ReviewIndex extends React.Component {
     constructor(props) {
@@ -9,27 +13,41 @@ class ReviewIndex extends React.Component {
         }
     }
 
-    componentDidMount() {
+
+    componentDidUpdate() {
         this.props.fetchReviews(this.props.productId);
     }
 
     render() {
         const {reviews} = this.props;
-        // const author = this.props.users[this.state.authorId];
-
-        // if(author === undefined) return null;
-
+        console.log(reviews)
         return (
             <div>
             <div className='reviews-box'>
                 <h2>Reviews</h2>
-                {/* <h3>{author.first_name}</h3> */}
                 <ul>
                     {
-                        reviews.map(review => <ReviewIndexItem
-                            review={review}
-                            key={review.id}
-                        />)
+                        reviews.map(review => {
+                        return (
+                            <div>
+                                <div>
+                                    <h4>{review.firstName}</h4>
+                                </div>
+                                <Rating
+                                    initialRating={review.rating}
+                                    emptySymbol="far fa-star"
+                                    fullSymbol="fas fa-star"
+                                    readonly={true}
+                                />
+                                
+                                <div>
+                                    {review.body}
+                                </div>
+                                
+                                
+                            </div>
+                        
+                        )})
                     }
                 </ul>
             </div>

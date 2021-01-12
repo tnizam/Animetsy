@@ -17,6 +17,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
+
         createReview: (review, productId) => dispatch(createReview(review, productId))
         // // createReview: (review) => dispatch(createReview(review))
 
