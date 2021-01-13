@@ -12,7 +12,7 @@ const Greeting = ({currentUser, logout, openModal}) => {
 
     const sessionLinks = () => (
         
-        <div className="site-container">
+        <div className="nav-container">
             <div className="main-nav">
                 <Link to={"/"}>
                     <img src={window.logourl} className="logo" width="160px" height="40px"/>
@@ -20,18 +20,16 @@ const Greeting = ({currentUser, logout, openModal}) => {
 
                 <SearchBar/> 
 
-                <Link to={"/cart"}>
-                    <i className="fas fa-shopping-cart"></i>
-                </Link>
-
                 <nav className="login-signup">
                     <button className="button" onClick={() => openModal('login')}>Login</button>
                     <br/>
                     <button className="button" onClick={() => openModal('signup')}>Signup</button>
                 </nav>
 
-                <div>
-                    
+                 <div className="cart">
+                    <Link to={"/cart"}>
+                        <i className="fas fa-shopping-cart"></i>
+                    </Link>
                 </div>
             </div>
 
@@ -41,7 +39,7 @@ const Greeting = ({currentUser, logout, openModal}) => {
     );
 
     const LoggedIn = () => (
-        <div >
+        <div className="nav-container">
             <div className="main-nav">
                 <Link to={"/"}>
                     <img src={window.logourl} className="logo" width="160px" height="40px"/>
@@ -49,21 +47,19 @@ const Greeting = ({currentUser, logout, openModal}) => {
                 
                 <SearchBar/> 
 
-                <Link to={"/cart"}>
-                    <i className="fas fa-shopping-cart"></i>
-                </Link>
-
                 <nav>
                     <div>
                         <button className="button" onClick={logout}>Logout</button>
                     </div>
                 </nav>
-            </div>
-            {/* <div className="top-banner">
-                <br/>
-                <h2 className="font-style">Welcome Back!</h2>
-            </div> */}
+            
+                <div className="cart">
+                    <Link to={"/cart"}>
+                        <i className="fas fa-shopping-cart"></i>
+                    </Link>
+                </div>
                    
+            </div>
 
         </div>
         
