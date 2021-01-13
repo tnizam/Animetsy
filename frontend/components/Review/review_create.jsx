@@ -56,15 +56,6 @@ class ReviewCreate extends React.Component {
                     fullSymbol="fas fa-star"
                     onChange={this.updateReview('rating')}
                 />
-                {/* <ReactStars
-                    count={4}
-                    size={15}
-                    activeColor="#ffd700"
-                    value={this.state.rating}
-                    // emptySymbol="far fa-star"
-                    // fullSymbol="fas fa-star"
-                    onChange={this.updateReview('rating')}
-                /> */}
                 
                 <textarea 
                     value={this.state.body}

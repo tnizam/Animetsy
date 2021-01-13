@@ -3,6 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { allProducts } from '../../actions/product_actions'
+import '@fortawesome/fontawesome-free/js/all.js';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -33,12 +34,11 @@ class SearchBar extends React.Component {
                     <form onSubmit={this.handleSubmit} className="search-form">
                         <div className="search-container">
                             <input type="text"
+                                placeholder= "Search Products..."
                                 value={this.state.search}
                                 onChange={this.update}
                                 className="search-input"/>
                         </div>
-
-                        <button type='submit'>Search</button>
                     </form>
                 </div>
             </div>

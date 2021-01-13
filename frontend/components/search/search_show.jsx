@@ -15,12 +15,6 @@ class SearchShow extends React.Component {
 
     render() {
         const {products} = this.props;
-        // let searchProducts = this.props.products.filter(
-        //     (product) => {
-        //         return product.productName.toLowerCase().indexOf(
-        //             this.state.search.toLowerCase()) !== -1;
-        //     } 
-        // );
 
         return (
             <div className="all-images">

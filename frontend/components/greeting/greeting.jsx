@@ -3,9 +3,9 @@ import { render } from 'react-dom';
 import { Link, Switch, Route } from 'react-router-dom';
 import ProductIndexContainer from "../product/product_index_container";
 import Banner from '../banner/banner'
-// import SearchContainer from '../search/search_container';
 import SearchBar from '../search/search_bar';
-import SearchShow from '../search/search_show'
+import SearchShow from '../search/search_show';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 
 const Greeting = ({currentUser, logout, openModal}) => {
@@ -20,13 +20,9 @@ const Greeting = ({currentUser, logout, openModal}) => {
 
                 <SearchBar/> 
 
-                {/* <SearchContainer/> */}
-                {/* <Switch>
-                    <Route exact path="/search" component={SearchContainer} /> 
-                </Switch> */}
-                <Switch>        
-                    <Route exact path="/search/:searched" component={SearchShow} /> 
-                </Switch> 
+                <Link to={"/cart"}>
+                    <i className="fas fa-shopping-cart"></i>
+                </Link>
 
                 <nav className="login-signup">
                     <button className="button" onClick={() => openModal('login')}>Login</button>
@@ -52,15 +48,10 @@ const Greeting = ({currentUser, logout, openModal}) => {
                 </Link>
                 
                 <SearchBar/> 
-                <Switch>        
-                    <Route exact path="/search/:searched" component={SearchShow} /> 
-                </Switch> 
 
-                {/* <SearchContainer/> */}
-
-                {/* <Switch>
-                    <Route exact path="/search" component={SearchContainer} /> 
-                </Switch> */}
+                <Link to={"/cart"}>
+                    <i className="fas fa-shopping-cart"></i>
+                </Link>
 
                 <nav>
                     <div>

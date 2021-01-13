@@ -29,10 +29,10 @@ pro4.photo.attach(io: File.open('app/assets/images/sa.jpg'), filename: 'sa.jpg')
 pro5 = Product.create({product_name: "DIY Aqua Terrarium Kit", description: "Handmade DIY Aqua Terrarium Kit", price: 35, seller_id: 1});
 pro5.photo.attach(io: File.open('app/assets/images/sa2.jpg'), filename: 'sa2.jpg');
 
-pro6 = Product.create({product_name: "BATH HOUSE from Spirited Away", description: "Handmade BATH HOUSE from Spirited Away -- paper model", price: 50, seller_id: 1});
+pro6 = Product.create({product_name: "Spirited Away Bath House", description: "Handmade BATH HOUSE from Spirited Away -- paper model", price: 50, seller_id: 1});
 pro6.photo.attach(io: File.open('app/assets/images/sa3.jpg'), filename: 'sa3.jpg');
 
-pro7 = Product.create({product_name: "Bottled Spirit Hard Enamel Pins", description: "Handmade Bottled Spirit Hard Enamel Pins", price: 15, seller_id: 1});
+pro7 = Product.create({product_name: "Bottled Spirit Pins", description: "Handmade Bottled Spirit Hard Enamel Pins", price: 15, seller_id: 1});
 pro7.photo.attach(io: File.open('app/assets/images/sg.jpg'), filename: 'sg.jpg');
 
 pro8 = Product.create({product_name: "Tokyo Ghoul Sticker", description: "Handmade Tokyo Ghoul Sticker", price: 5, seller_id: 1});
@@ -65,7 +65,7 @@ pro16.photo.attach(io: File.open('app/assets/images/op.jpg'), filename: 'op.jpg'
 pro17 = Product.create({product_name: "Your Name Pin", description: "Handmade Your Name Pin", price: 10, seller_id: 1});
 pro17.photo.attach(io: File.open('app/assets/images/yn3.jpg'), filename: 'yn3.jpg');
 
-pro18 = Product.create({product_name: "Embroidered Pixelated Pokemon Eevee Cap", description: "Handmade Embroidered Pixelated Pokemon Eevee Cap", price: 20, seller_id: 1});
+pro18 = Product.create({product_name: "Pokemon Eevee Cap", description: "Handmade Embroidered Pixelated Pokemon Eevee Cap", price: 20, seller_id: 1});
 pro18.photo.attach(io: File.open('app/assets/images/ec.jpg'), filename: 'ec.jpg');
 
 pro19 = Product.create({product_name: "Pokemon Eevee pin", description: "Handmade Pokemon Eevee pin", price: 15, seller_id: 1});
