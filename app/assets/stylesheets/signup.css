@@ -87,6 +87,14 @@
 } */
 
 .signup-container {
-    position: relative;
-    bottom: 38px;
+  position: relative;
+  bottom: 38px;
+}
+
+.errors-container {
+  color: red;
+  display: block;
+  position: relative;
+  left: 20px;
+  top: -37px;
 }

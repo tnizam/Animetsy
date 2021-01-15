@@ -38,19 +38,23 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
+        // debugger
         return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+            <div className="errors-container">
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <p key={`error-${i}`}>
+                            {error}
+                        </p>
+                    ))}
+                </ul>
+            </div>
         );
     }
 
     render() {
         // debugger
+        
         const signUp = () => (
             <div className="signup-form-box">
                 <form onSubmit={this.handleSubmit}>

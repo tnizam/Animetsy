@@ -9,6 +9,7 @@ class CartItem extends React.Component {
    
         // this.updateQuantity = this.updateQuantity.bind(this);
         this.handleDeleteItem = this.handleDeleteItem.bind(this);
+        this.checkoutAlert = this.checkoutAlert.bind(this);
     }
 
     handleUpdateQuantity(cartItem) {
@@ -32,62 +33,83 @@ class CartItem extends React.Component {
         this.props.fetchCartItems();
     }
 
+    checkoutAlert() {
+        alert("thank you for shopping!!!")
+    }
+
     render() {
         // console.log("props", this.props)
         
         const {cartItems, product} = this.props;
         console.log("props", this.props)
         let total = 0;
+        let totalItems = 0;
 
         if(!cartItems) {
             return null;
         } 
 
         return (
-            <div>
-                <ul>
+            <div className="all-items">
+                <ul className="cart-items">
                     {
                       cartItems.map((cartItem) => {
                         
                         
                         return (
-                            <div>
+                            <div className="cart-item">
                                 <Link to={`/products/${cartItem.productId}`}>
                                 <img src={cartItem.photoUrl} className="direct-img" />             
                                 </Link>
-                                <h2 className="product-name">{cartItem.name}</h2>
-                                <h2 className="product-price">${cartItem.price * cartItem.quantity}</h2>
-                                <h2>{cartItem.quantity}</h2>
 
-                                <select className="dropdown-content"
-                                    value={cartItem.quantity}
-                                    id="quanityId"
-                                    onChange={this.handleUpdateQuantity(cartItem)}
-                                >
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                <div className="name-container">
+                                    <h2 className="pro-name">{cartItem.name}</h2>
 
-                                </select>
-{/* 
-                                <button onClick={() => 
-                                    this.props.destroyCartItem(cartItem.id).then(() => 
-                                        window.location.reload())
-                                }>Delete</button> */}
-                                 <button onClick={this.handleDeleteItem}>Delete</button>
+                                    <button className="remove-button" onClick={() => 
+                                        this.props.destroyCartItem(cartItem.id).then(() => 
+                                            window.location.reload())
+                                    }>Remove</button>
+                                </div>
+
+                                <div className="dropdown-container">
+                                    <select className="dropdown"
+                                        value={cartItem.quantity}
+                                        id="quanityId"
+                                        onChange={this.handleUpdateQuantity(cartItem)}
+                                    >
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+
+                                    </select>
+                                </div>
+                                <div className="price-container">
+                                    <h2 className="item-total-price">${cartItem.price * cartItem.quantity}</h2>
+                                    <p className="each-price">(${cartItem.price} each)</p>
+                                </div>
                             </div>
 
                         )})
                     }
                 </ul>
-                <div>
+                <div className="cart-total">
                     {cartItems.forEach(cartItem => {
-                        total += (cartItem.price * cartItem.quantity)
+                        total += (cartItem.price * cartItem.quantity);
+                        totalItems += 1;
                     })}
-                    <h3>Total: ${total}</h3>
+                    <h3>{totalItems === 1 ? 
+                    (<h3 className="total">Total({totalItems} item): ${total}</h3>)
+                    :(<h3 className="total">Total({totalItems} items): ${total}</h3>)}</h3>
+                    
+                    
+                    {/* <h3 className="total">Total({totalItems} items): ${total}</h3> */}
+                    <button className="checkout-button" 
+                        onClick={this.checkoutAlert}>Checkout</button>
                 </div>
+
+                <div className="space"></div>
             </div>
         )
     }

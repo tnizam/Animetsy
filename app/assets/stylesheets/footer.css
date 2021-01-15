@@ -7,17 +7,47 @@
     background-color: #232347;
     color: white;
     text-align: center;
+    bottom: 0;
+    height: 35px;
+
 }
 
 .footer-banner {
     height: 420px;
     width: 100%;
+    position: relative;
+    bottom: -5px;
 }
-
-/* .footer-blank {
-    height: 200px;
-} */
 
 .footer-tag {
     margin-top: 0%;
+}
+
+.fa-github {
+    color: white;
+}
+
+.fa-linkedin {
+    color: white;
+}
+
+.fa-user-circle {
+    color: white;
+}
+
+.icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.content{
+    min-height: calc(100vh - 70px);
+}
+
+.icon-container {
+    justify-content: center;
+    position: relative;
+    /* align-items: flex-end; */
+    bottom: -7px;
 }

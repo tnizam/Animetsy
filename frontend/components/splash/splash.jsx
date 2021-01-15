@@ -2,7 +2,7 @@ import React from 'react';
 import ProductIndexContainer from '../product/product_index_container';
 import GreetingContainer from '../greeting/greeting_container';
 import Banner from '../banner/banner'
-import Footer from '../footer/footer'
+import FooterBanner from '../footer/footer_banner'
 
 class Splash extends React.Component{
     constructor(props) {
@@ -32,7 +32,7 @@ class Splash extends React.Component{
                     }
                 </div>
 
-                <div><Footer /></div>
+                <div><FooterBanner /></div>
             </div>
         )
     }

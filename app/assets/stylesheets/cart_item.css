@@ -1,0 +1,120 @@
+.cart-items {
+    display: grid;
+    margin-left: 8%;
+    width: 700px;
+    margin-right: 50px;
+    display: flex;
+    margin-right: 50px;
+    flex-direction: column;
+    margin-left: 1px;
+}
+
+.dropdown {
+    padding: 0 0.75em 0 0;
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: lightgray;
+    border-width: 2px;
+    box-shadow: gray;
+    box-shadow: -1px 1px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover {
+    border-color: black;
+    border-width: 2px;
+}
+
+.remove-button {
+    border: transparent;
+    background-color: transparent;
+    transition-duration: 0.4s;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 65px;
+    height: 30px;
+    margin-left: 10px;
+    font-family: system-ui;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.remove-button:hover {
+  background-color: rgba(27, 27, 27, 0.527); 
+  color: white;
+}
+
+.cart-item {
+    display: flex;
+}
+
+.name-container {
+    padding-top: 13px;
+    padding-right: 20px;
+    display: block;
+    flex-wrap: wrap;
+    width: 16pc;
+}
+
+h2.pro-name {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+.dropdown-container {
+    margin-top: 20px;
+}
+
+.price-container {
+    margin-left: 35px;
+}
+
+h2.item-total-price {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 1px;
+    margin-top: 18px;
+}
+
+.each-price {
+    margin-top: 3px;
+    color: gray;
+    font-size: 14px;
+}
+
+.all-items {
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+
+}
+
+.cart-total {
+    margin-top: 15px;
+}
+
+.checkout-button {
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    width: 230px;
+    height: 44px;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+.total {
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 2%;
+}

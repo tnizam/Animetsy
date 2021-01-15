@@ -6,7 +6,8 @@ import GreetingContainer from "./greeting/greeting_container";
 import ProductShowContainer from "./product/product_show_container";
 import CartItemContainer from "./Cart Item/cart_item_container";
 // import SearchContainer from "./search/search_container";
-import SearchShow from "./search/search_show"
+import SearchShow from "./search/search_show";
+import Footer from "./footer/footer";
 
 import {Route, Switch} from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -17,23 +18,20 @@ import SplashContainer from './splash/splash_container'
 const App = () => (
     <div>
         <Modal />
-        <header >
-            <GreetingContainer />
-            
-        </header>
-        <Switch>
-            {/* <Route exact path="/" component={ProductIndexContainer} /> */}
-            <Route exact path="/" component={SplashContainer } />
-            <Route exact path="/products/:productId" component={ProductShowContainer} />
-            <Route exact path="/cart" component={CartItemContainer} />
-            <Route exact path="/search" component={GreetingContainer} />
-            <Route exact path="/search/:searched" component={SearchShow} /> 
-        </Switch>
-
-        <div className="footer-blank"></div>
-        <footer className="footer">
-            <p className="footer-tag">United States | English(US) | $(USD)</p>
-        </footer>
+        <div className="content">
+            <header >
+                <GreetingContainer />
+            </header>
+            <Switch>
+                <Route exact path="/" component={SplashContainer } />
+                <Route exact path="/products/:productId" component={ProductShowContainer} />
+                <Route exact path="/cart" component={CartItemContainer} />
+                <Route exact path="/search" component={GreetingContainer} />
+                <Route exact path="/search/:searched" component={SearchShow} /> 
+            </Switch>
+        </div>
+            {/* <Route exact path="/" component={Footer} /> */}
+            <Footer/>
     </div>
 );
 

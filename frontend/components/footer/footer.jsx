@@ -1,15 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/js/all.js';
 
-const Footer = () => {
-    return (
-        <div>
-            <div className="footer-blank"></div>
-            <footer className="footer">
-                <img src={window.bannerurl} className="footer-banner" />
-            </footer>
-        </div>
-    )
+
+class Footer extends React.Component {
+    render() {
+        return(
+            <div className="footer">
+                <div className="icon-container">
+                    <a className="icon" href="https://github.com/tnizam/Animetsy/">
+                        <i className="fab fa-github"></i>
+                    </a>
+                    <a className="icon" href="https://www.linkedin.com/in/tahminanizam/">
+                        <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a className="icon" href="https://tnizam.github.io/">
+                        <i className="fas fa-user-circle"></i>
+                    </a>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default Footer;
