@@ -17,8 +17,6 @@ class Api::CartItemsController < ApplicationController
             @cart_item.buyer_id = current_user.id
             @cart_item.product_id = params[:cart_item][:product_id]
 
-            # @cart_item = current_user.cart_items.new(cart_items_params);
-
             if @cart_item.save
                 render :show
             else
