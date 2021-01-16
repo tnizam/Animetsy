@@ -92,9 +92,7 @@
 	color: #888;  
 }
 
-input:-moz-placeholder {
-  color: #888ƒ
-}
+
 
 .button {
   float: left;
@@ -128,11 +126,7 @@ input:-moz-placeholder {
     width: 10px; */
     
 }
-/* 
-.fa-shopping-cart:hover {
-    background-color: rgba(27, 27, 27, 0.527); 
-    /* color: white; */
-} */
+
 
 .cart {
     width: 10px;
