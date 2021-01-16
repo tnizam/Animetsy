@@ -35,3 +35,46 @@ Animetsy is a fullstack clone of Etsy. Animetsy specifically focuses on the Anim
 <br/>
 
 <img src="app/assets/images/cart.gif"/>
+
+<br/>
+<br/>
+
+## Challenges
+#
+
+One challenge that I ran into was recieve data from another table from the backend for my reviews. During this time, I was trying to recieve the current user's first name to add to the reviews index page when a review is created. I went back to the backend of reviews and checked the associations. That is when I realized the associations also had to be connected in the views if I wanted to recieve access to the information in the users table.
+
+```
+@reviews.each do |review|
+    json.set! review.id do 
+        json.partial! '/api/reviews/review', review: review 
+        json.firstName review.user.first_name
+
+    end
+end
+```
+That is when I was able to retrieve the user's table information in the reviews, for the frontend. 
+
+```
+reviews.map(review => {
+            return (
+                <div className="each-review">
+                    <div>
+                        <h4 className="review-name">
+                            {review.firstName}</h4>
+                    </div>
+                    <Rating
+                        initialRating={review.rating}
+                        emptySymbol="far fa-star"
+                        fullSymbol="fas fa-star"
+                        readonly={true}
+                    />
+                    
+                    <div>
+                        {review.body}
+                    </div>
+                        
+                </div>
+            
+            )})
+```
