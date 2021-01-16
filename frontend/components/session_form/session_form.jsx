@@ -19,7 +19,6 @@ class SessionForm extends React.Component {
             email: 'demoUser@gmail.com',
             password: 'password'
         }
-        // debugger;
         this.props.processForm(user).then(this.props.closeModal);
     }
 
@@ -33,12 +32,10 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         const promise = this.props.processForm(user);
-            // debugger;
             promise.then(this.props.closeModal);
     }
 
     renderErrors() {
-        // debugger
         return (
             <div className="errors-container">
                 <ul>
@@ -53,7 +50,6 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        // debugger
         
         const signUp = () => (
             <div className="signup-form-box">

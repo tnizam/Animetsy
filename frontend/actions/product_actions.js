@@ -21,7 +21,6 @@ export const allProducts = () => dispatch => {
 };
 
 export const eachProduct = (productId) => dispatch => {
-    // debugger;
     return ProductAPIUtil.eachProduct(productId).then((product) =>(
         dispatch(receiveEachProduct(product))
     ))

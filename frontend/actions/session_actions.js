@@ -20,7 +20,6 @@ const receiveErrors = errors => ({
 
 
 export const login = user => dispatch => {
-    // debugger;
     return SessionAPIUtil.login(user).then(user => (
         dispatch(receiveCurrentUser(user))
     ), errors => (

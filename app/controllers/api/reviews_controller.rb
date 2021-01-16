@@ -3,7 +3,6 @@ class Api::ReviewsController < ApplicationController
     before_action only: [:create];
 
     def index
-        # debugger;
         if params[:product_id]
             @reviews = Review.where(product_id: params[:product_id])
 
@@ -19,7 +18,6 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create
-        # debugger;
         if logged_in?
             @review = Review.new(review_params);
             @review.author_id = current_user.id

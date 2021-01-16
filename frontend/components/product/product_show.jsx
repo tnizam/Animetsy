@@ -9,15 +9,13 @@ class ProductShow extends React.Component {
         this.state = {
             quantity: 1
         }
-    console.log("prop", this.props)
-    console.log("state", this.state)
+
         
         this.handleSubmitToCart = this.handleSubmitToCart.bind(this);
         this.selectQuantity = this.selectQuantity.bind(this);
 };
 
     componentDidMount() {
-        // debugger;
         this.props.eachProduct(this.props.match.params.productId);
     };
 
@@ -38,7 +36,6 @@ class ProductShow extends React.Component {
     }
 
     render () {
-        // debugger;
         const {product, cartItem} = this.props;
         
         if(!product) {
@@ -46,7 +43,6 @@ class ProductShow extends React.Component {
         } 
 
 
-        // debugger;
         return (
             <div>
                 <div className="product-container">

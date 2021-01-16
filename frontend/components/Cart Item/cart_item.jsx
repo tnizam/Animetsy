@@ -38,10 +38,8 @@ class CartItem extends React.Component {
     }
 
     render() {
-        // console.log("props", this.props)
         
         const {cartItems, product} = this.props;
-        console.log("props", this.props)
         let total = 0;
         let totalItems = 0;
 
@@ -99,9 +97,9 @@ class CartItem extends React.Component {
                         total += (cartItem.price * cartItem.quantity);
                         totalItems += 1;
                     })}
-                    <h3>{totalItems === 1 ? 
+                    <div>{totalItems === 1 ? 
                     (<h3 className="total">Total({totalItems} item): ${total}</h3>)
-                    :(<h3 className="total">Total({totalItems} items): ${total}</h3>)}</h3>
+                    :(<h3 className="total">Total({totalItems} items): ${total}</h3>)}</div>
                     
                     
                     {/* <h3 className="total">Total({totalItems} items): ${total}</h3> */}

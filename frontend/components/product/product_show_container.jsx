@@ -4,13 +4,10 @@ import { eachProduct, allProducts } from '../../actions/product_actions';
 import {createCartItem} from '../../actions/cart_item_actions';
 
 const mSTP = (state, ownProps) => {
-    // debugger;
-    // console.log(state)
-    // console.log(ownProps)
+
     const proId = parseInt(ownProps.match.params.productId);
     const pro = state.entities.products[proId];
-    // console.log("mstp proid", proId)
-    // console.log("mstp pro", pro)
+
     return {
         product: state.entities.products[proId],
         cartItems: state.entities.cartItems,

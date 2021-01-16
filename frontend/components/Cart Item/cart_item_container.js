@@ -4,8 +4,6 @@ import { destroyCartItem, fetchCartItems, updateCartItem } from '../../actions/c
 import { allProducts, eachProduct } from '../../actions/product_actions'
 
 const mSTP = (state, ownProps) => {
-    console.log("state",state)
-    console.log("own", ownProps)
     return {
         cartItems: Object.values(state.entities.cartItems),
         currentUser: state.entities.users[state.session.id],
