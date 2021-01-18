@@ -12,17 +12,18 @@ class Api::CartItemsController < ApplicationController
     end
 
     def create
-        if logged_in?
+        
             @cart_item = CartItem.new(cart_items_params);
             @cart_item.buyer_id = current_user.id
             @cart_item.product_id = params[:cart_item][:product_id]
+            
 
             if @cart_item.save
                 render :show
             else
                 render json: @cart_item.errors.full_messages, status: 422
             end
-        end
+        
     end
 
     def update 

@@ -18,8 +18,7 @@ class CartItem extends React.Component {
             id: cartItem.id,
             product_id: cartItem.productId,
             total_cost: cartItem.price,
-            quantity: e.target.value,
-            photoUrl: cartItem.photoUrl
+            quantity: e.target.value
         })
 
     }
