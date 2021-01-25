@@ -7,13 +7,13 @@ class Footer extends React.Component {
         return(
             <div className="footer">
                 <div className="icon-container">
-                    <a className="icon" href="https://github.com/tnizam/Animetsy/">
+                    <a className="icon" target="_blank" href="https://github.com/tnizam/Animetsy/">
                         <i className="fab fa-github"></i>
                     </a>
-                    <a className="icon" href="https://www.linkedin.com/in/tahminanizam/">
+                    <a className="icon" target="_blank" href="https://www.linkedin.com/in/tahminanizam/">
                         <i className="fab fa-linkedin"></i>
                     </a>
-                    <a className="icon" href="https://tnizam.github.io/">
+                    <a className="icon" target="_blank" href="https://tnizam.github.io/">
                         <i className="fas fa-user-circle"></i>
                     </a>
                 </div>
