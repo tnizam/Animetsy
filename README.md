@@ -6,6 +6,8 @@
 
 Animetsy is a fullstack clone of Etsy. Animetsy specifically focuses on the Anime industry and handmade Anime merchendise. On Animetsy you are able to browse and search for different items. You are able to leave reviews and add any item to your own cart.
 
+[Click here to see Animetsy](https://animetsy.herokuapp.com/)
+
 ## Technologies
 #
 * Ruby on Rails
