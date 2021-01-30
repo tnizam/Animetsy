@@ -18,9 +18,6 @@ class ReviewIndex extends React.Component {
     componentDidUpdate(prevProps, prevState) {
         this.props.fetchReviews(this.props.productId);
 
-        // if(prevState.authorId != this.state.authorId) {
-        //     this.props.fetchReviews(this.props.productId);
-        // }
     }
 
     render() {
