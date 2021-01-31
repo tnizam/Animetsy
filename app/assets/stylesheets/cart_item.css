@@ -120,3 +120,8 @@ h2.item-total-price {
     font-size: 21px;
 
 }
+
+.cart-but {
+    border: none;
+    background: none;
+}

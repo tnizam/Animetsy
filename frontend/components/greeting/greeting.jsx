@@ -26,10 +26,9 @@ const Greeting = ({currentUser, logout, openModal}) => {
                     <button className="button" onClick={() => openModal('signup')}>Signup</button>
                 </nav>
 
-                 <div className="cart">
-                    <Link to={"/cart"}>
-                        <i className="fas fa-shopping-cart"></i>
-                    </Link>
+                <div className="cart">
+                    <button className="cart-but" onClick={() => openModal('login')}>
+                        <i className="fas fa-shopping-cart"></i></button>             
                 </div>
             </div>
 
