@@ -25,7 +25,7 @@ const App = () => (
             <Switch>
                 <Route exact path="/" component={SplashContainer } />
                 <Route exact path="/products/:productId" component={ProductShowContainer} />
-                <Route exact path="/cart" component={CartItemContainer} />
+                <ProtectedRoute exact path="/cart" component={CartItemContainer} />
                 <Route exact path="/search" component={GreetingContainer} />
                 <Route exact path="/search/:searched" component={SearchShow} /> 
             </Switch>

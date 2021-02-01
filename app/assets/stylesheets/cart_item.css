@@ -125,3 +125,12 @@ h2.item-total-price {
     border: none;
     background: none;
 }
+
+p.empty {
+    font-family: sans-serif;
+    width: 300px;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    right: 120%;
+}

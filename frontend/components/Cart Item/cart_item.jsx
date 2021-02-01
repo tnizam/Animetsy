@@ -9,7 +9,6 @@ class CartItem extends React.Component {
    
         // this.updateQuantity = this.updateQuantity.bind(this);
         this.handleDeleteItem = this.handleDeleteItem.bind(this);
-        this.checkoutAlert = this.checkoutAlert.bind(this);
         this.handleDeleteAll = this.handleDeleteAll.bind(this);
     }
 
@@ -33,13 +32,11 @@ class CartItem extends React.Component {
         this.props.fetchCartItems();
     }
 
-    checkoutAlert() {
-        alert("thank you for shopping!!!")
-    }
 
     handleDeleteAll(e) {
         e.preventDefault();
-        this.props.destroyCartItems();
+        this.props.destroyCartItems().then(() => 
+            window.location.reload());
     }
 
     render() {
@@ -52,8 +49,6 @@ class CartItem extends React.Component {
         if(!cartItems) {
             return null;
         } 
-
-        if()
 
         return (
             <div className="all-items">
@@ -107,12 +102,21 @@ class CartItem extends React.Component {
                     })}
                     <div>{totalItems === 1 ? 
                     (<h3 className="total">Total({totalItems} item): ${total}</h3>)
+                    : totalItems === 0 ? null
                     :(<h3 className="total">Total({totalItems} items): ${total}</h3>)}</div>
-                    
-                    
-                    <button className="checkout-button" 
-                        onClick={this.handleDeleteAll}>Checkout
-                    </button>
+
+                    <div>
+                    </div>
+
+                    <div>
+                        {cartItems.length > 0 ?
+                            <button className="checkout-button" 
+                            onClick={this.handleDeleteAll}>Checkout
+                            </button> 
+                            : <p className="empty">Cart is empty!!! <br/>
+                                <p>Browse our large selection of items! </p></p> 
+                        }
+                    </div>
 
                 </div>
 
