@@ -131,3 +131,30 @@
 .cart {
     width: 10px;
 }
+
+.nav-row {
+    background-color: #232347;
+    height: 30px;
+}
+
+.nav-list {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 30px;
+    color: white;
+    display: block;
+    flex-flow: row;
+    font-family: sans-serif;
+    position: absolute;
+    justify-content: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.nav-item {
+    display: inline-block;
+    padding-right: 3%;
+    position: relative;
+    top: 7px;
+}

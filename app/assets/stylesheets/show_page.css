@@ -47,9 +47,8 @@ img.pro-image {
 
 .product-name-show {
     font-size: 35px;
-    font-family: serif;
-    /* font-family: "Guardian-EgypTT",serif; */
-    font-weight: lighter;
+    font-family: system-ui;
+    font-weight: 200;
     margin-bottom: 0px;
 }
 

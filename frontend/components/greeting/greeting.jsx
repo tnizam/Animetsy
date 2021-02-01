@@ -4,7 +4,6 @@ import { Link, Switch, Route } from 'react-router-dom';
 import ProductIndexContainer from "../product/product_index_container";
 import Banner from '../banner/banner'
 import SearchBar from '../search/search_bar';
-import SearchShow from '../search/search_show';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 
@@ -31,7 +30,26 @@ const Greeting = ({currentUser, logout, openModal}) => {
                         <i className="fas fa-shopping-cart"></i></button>             
                 </div>
             </div>
-
+            <div>
+                <ul>apparel</ul>
+                <ul>home</ul>
+                <ul>accessories</ul>
+                <ul>
+                    <a className="nav-icon" target="_blank" href="https://github.com/tnizam/Animetsy/">
+                        <i className="fab fa-github"></i>
+                    </a>
+                </ul>
+                <ul>
+                    <a className="nav-icon" target="_blank" href="https://www.linkedin.com/in/tahminanizam/">
+                        <i className="fab fa-linkedin"></i>
+                    </a>
+                </ul>
+                <ul>
+                    <a className="nav-icon" target="_blank" href="https://tnizam.github.io/">
+                        <i className="fas fa-user-circle"></i>
+                    </a>
+                </ul>
+            </div>
 
         </div>
         
@@ -58,6 +76,31 @@ const Greeting = ({currentUser, logout, openModal}) => {
                     </Link>
                 </div>
                    
+            </div>
+
+            <div className="nav-row">
+                <ul className="nav-list">
+                    <li className="nav-item">apparel</li>
+                    <li className="nav-item">home</li>
+                    <li className="nav-item">office supplies</li>
+                    <li className="nav-item">accessories</li>
+                    <li className="nav-item">entertainment</li>
+                    <li className="nav-item">
+                        <a className="nav-icon" target="_blank" href="https://github.com/tnizam/Animetsy/">
+                            <i className="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-icon" target="_blank" href="https://www.linkedin.com/in/tahminanizam/">
+                            <i className="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-icon" target="_blank" href="https://tnizam.github.io/">
+                            <i className="fas fa-user-circle"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
         </div>
