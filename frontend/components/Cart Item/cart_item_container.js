@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import CartItem from './cart_item';
-import { destroyCartItem, fetchCartItems, updateCartItem } from '../../actions/cart_item_actions';
+import { destroyCartItem, fetchCartItems, updateCartItem, destroyCartItems } 
+    from '../../actions/cart_item_actions';
 import { allProducts, eachProduct } from '../../actions/product_actions'
 
 const mSTP = (state, ownProps) => {
@@ -18,7 +19,8 @@ const mDTP = dispatch => {
         fetchCartItem: (cartItemId) => dispatch(fetchCartItem(cartItemId)),
 
         updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
-        destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId))
+        destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId)),
+        destroyCartItems: () => dispatch(destroyCartItems())
     }
 };
 

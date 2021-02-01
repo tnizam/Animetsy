@@ -10,6 +10,7 @@ class CartItem extends React.Component {
         // this.updateQuantity = this.updateQuantity.bind(this);
         this.handleDeleteItem = this.handleDeleteItem.bind(this);
         this.checkoutAlert = this.checkoutAlert.bind(this);
+        this.handleDeleteAll = this.handleDeleteAll.bind(this);
     }
 
     handleUpdateQuantity(cartItem) {
@@ -36,8 +37,14 @@ class CartItem extends React.Component {
         alert("thank you for shopping!!!")
     }
 
+    handleDeleteAll(e) {
+        e.preventDefault();
+        this.props.destroyCartItems();
+    }
+
     render() {
-        
+        console.log(this.props)
+
         const {cartItems, product} = this.props;
         let total = 0;
         let totalItems = 0;
@@ -45,6 +52,8 @@ class CartItem extends React.Component {
         if(!cartItems) {
             return null;
         } 
+
+        if()
 
         return (
             <div className="all-items">
@@ -101,9 +110,10 @@ class CartItem extends React.Component {
                     :(<h3 className="total">Total({totalItems} items): ${total}</h3>)}</div>
                     
                     
-                    {/* <h3 className="total">Total({totalItems} items): ${total}</h3> */}
                     <button className="checkout-button" 
-                        onClick={this.checkoutAlert}>Checkout</button>
+                        onClick={this.handleDeleteAll}>Checkout
+                    </button>
+
                 </div>
 
                 <div className="space"></div>

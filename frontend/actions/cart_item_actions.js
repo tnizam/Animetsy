@@ -4,6 +4,7 @@ export const RECEIVE_CART_ITEMS = "RECEIVE_CART_ITEMS";
 export const RECEIVE_CART_ITEM = "RECEIVE_CART_ITEM";
 export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
 export const RECEIVE_CART_ITEM_ERRORS = "RECEIVE_CART_ITEM_ERRORS";
+export const REMOVE_CART_ITEMS = "REMOVE_CART_ITEMS";
 
 const receiveCartItems = (cartItems) => ({
     type: RECEIVE_CART_ITEMS,
@@ -18,6 +19,11 @@ const receiveCartItem = (cartItem) => ({
 const removeCartItem = (cartItemId) => ({
     type: REMOVE_CART_ITEM,
     cartItemId
+});
+
+const removeCartItems = (cartItems) => ({
+    type: REMOVE_CART_ITEMS,
+    cartItems
 });
 
 const receiveCartItemErrors = errors => ({
@@ -60,5 +66,11 @@ export const updateCartItem = (cartItem) => dispatch => {
 export const destroyCartItem = (cartItemId) => dispatch => {
     return CartItemAPIUtil.destroyCartItem(cartItemId).then(cartItemId => (
         dispatch(removeCartItem(cartItemId))
+    ))
+};
+
+export const destroyCartItems = () => dispatch => {
+    return CartItemAPIUtil.destroyCartItems().then(cartItems => (
+        dispatch(removeCartItems(cartItems))
     ))
 };

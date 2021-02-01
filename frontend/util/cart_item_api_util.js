@@ -43,3 +43,17 @@ export const destroyCartItem = (cartItemId) => {
         url: `/api/cart_items/${cartItemId}`
     })
 };
+
+export const destroyCartItems = () => {
+    return $.ajax({
+        method: 'DELETE',
+        url: '/api/cart_items/clear',
+    })    
+};
+
+// export const clearCartItems = () => {
+//     return $.ajax({
+//         method: 'DELETE',
+//         url: '/api/cart_items/clear',
+//     })    
+// }

@@ -8,7 +8,7 @@ import { login, logout, signup } from "./actions/session_actions";
 import { allProducts, eachProduct } from "./actions/product_actions"
 // import { createReview, fetchReviews } from "./actions/review_actions";
 import { createReview, fetchReviews } from "./util/review_api_util";
-import { createCartItem, destroyCartItem, fetchCartItems, updateCartItem } from "./util/cart_item_api_util";
+import { createCartItem, destroyCartItem, fetchCartItems, updateCartItem, destroyCartItems } from "./util/cart_item_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.createCartItem = createCartItem;
   window.updateCartItem = updateCartItem;
   window.destroyCartItem = destroyCartItem;
+  window.destroyCartItems = destroyCartItems;
 
   window.fetchReviews = fetchReviews;
   window.createReview = createReview;

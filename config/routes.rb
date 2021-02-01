@@ -6,7 +6,9 @@ Rails.application.routes.draw do
       resources :products, only: [:index, :show] do #:update, :delete, :create --- for seller !
         resources :reviews, only: [:create, :index, :show]
       end
-      resources :cart_items, only: [:index, :create, :show, :destroy, :update]
+      resources :cart_items, only: [:index, :create, :show, :destroy, :update] do
+        delete "clear", on: :collection
+      end
       
     end
     root "static_pages#root"

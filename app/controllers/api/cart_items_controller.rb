@@ -46,6 +46,11 @@ class Api::CartItemsController < ApplicationController
         end
     end
 
+    def clear 
+        @cart_items = CartItem.all 
+        @cart_items.destroy_all
+    end
+
     def cart_items_params
         params.require(:cart_item).permit(:buyer_id, :product_id, :total_cost, :quantity, :id)
     end
