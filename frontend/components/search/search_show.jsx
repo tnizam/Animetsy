@@ -25,11 +25,13 @@ class SearchShow extends React.Component {
                 {bgImg}
                 {this.props.searchProducts.length === 0 ?
                     <p className="no-prod">We could not find any 
-                        results for {this.props.searched} 
+                        results for "{this.props.searched}" 
                         <p>Try searching something else instead?</p>
                     </p> 
-                    : <p className="num-product">
-                        Number of products found: {this.props.searchProducts.length}</p>
+                    : <p className="num-product"> 
+                        Number of products found: {this.props.searchProducts.length}
+                        </p> 
+                        
                     }
                 </div>
 

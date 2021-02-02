@@ -12,7 +12,7 @@ Animetsy is a fullstack clone of Etsy. Animetsy specifically focuses on the Anim
 #
 * Ruby on Rails
 * Javascript
-* Raact
+* React
 * Redux
 * HTML
 * CSS

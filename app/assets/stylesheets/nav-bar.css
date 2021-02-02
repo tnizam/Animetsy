@@ -92,7 +92,7 @@
     font-family: sans-serif;
     position: absolute;
     justify-content: center;
-    font-weight: bold;
+    font-weight: 400;
     width: 95%;
 }
 
@@ -102,3 +102,9 @@
     position: relative;
     top: 7px;
 }
+
+/* .nav-item:hover {
+    text-decoration: underline;
+   text-decoration-color: yellow;
+   text-decoration-thickness: 2px;
+} */
