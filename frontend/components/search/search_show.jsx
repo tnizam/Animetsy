@@ -15,9 +15,24 @@ class SearchShow extends React.Component {
 
     render() {
         const {products} = this.props;
-
+        let bgImg;
+        if(this.props.searchProducts.length === 0) {
+            bgImg = <img src={window.searchbg} className="search-bg" />
+        }
         return (
             <div className="all-images">
+                <div className="no-prod-container"> 
+                {bgImg}
+                {this.props.searchProducts.length === 0 ?
+                    <p className="no-prod">We could not find any 
+                        results for {this.props.searched} 
+                        <p>Try searching something else instead?</p>
+                    </p> 
+                    : <p className="num-product">
+                        Number of products found: {this.props.searchProducts.length}</p>
+                    }
+                </div>
+
                 <ul className="img-testing">
                     {
                       this.props.searchProducts.map(product => <ProductIndexItem
@@ -41,7 +56,8 @@ const mSTP = (state, ownProps) => {
         products: Object.values(state.entities.products),
         searchProducts: products.filter(product => {
             return(product.productName.toLowerCase().includes(searched))
-        })
+        }),
+        searched: ownProps.match.params.searched.toLowerCase()
     }
 };
 
