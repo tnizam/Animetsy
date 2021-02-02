@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import ReviewIndexContainer from '../Review/review_index_container';
 import ReviewCreateContainer from '../Review/review_create_container';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 class ProductShow extends React.Component {
     constructor(props) {
@@ -44,7 +45,7 @@ class ProductShow extends React.Component {
 
 
         return (
-            <div>
+            <div className="show-page">
                 <div className="product-container">
                     <div>
                         <img src={product.photoUrl} className="pro-image"/>
@@ -69,17 +70,37 @@ class ProductShow extends React.Component {
                         <button className='cart-button'
                                 onClick={this.handleSubmitToCart}
                         >Add to cart</button>
-                        {/* <form onSubmit={this.handleSubmitToCart}>
-                            <div>
-                                <h2>${product.price}</h2>
-                            </div>
-                        </form> */}
 
                         <h3 className='des-tag'>Description:</h3>
                         <p className='description'>{product.description}</p>
+                        <br/>
+                        <div className="extra-details">
+                            <p className="extra-desc">
+                                <i className="fas fa-hand-sparkles"></i> <strong>Handmade</strong></p>
+                            <p className="extra-desc">
+                                <i className="fas fa-truck"></i> <strong>Nice Choice!</strong> Enjoy 
+                                free shipping when you spend $35!</p>
+                            <p className="extra-desc">
+                                <i className="fas fa-shopping-cart"></i> <strong>Other 
+                                    people want this!</strong> Over 20 people 
+                                    have this in their carts right now.
+                            </p>
+                            <p className="ship-return">Shipping and return policies</p>
+                            <div className="grid-container">
+                                <div className="shipping">
+                                    <p className="ship">Ready to ship in</p>
+                                    <p className="cap-ship">1-3 business days</p>
+                                </div>
+                                <div className="return">
+                                    <p className="ship">Returns and exchanges</p>
+                                    <p className="cap-ship">Accepted</p>
+                                    <p className="ship">Exceptions may apply</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
+                </div>
                     <div className='review-container'>
                         <ReviewIndexContainer
                             productId={product.id}
