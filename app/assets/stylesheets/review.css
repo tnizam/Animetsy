@@ -7,11 +7,14 @@
     align-items: baseline;
     position: relative;
     left: 16%;
-
+    bottom: 17px;
 }
 
 .review-textarea {
     resize: none;
+    width: 112%;
+    height: 100px;
+    margin-top: 3px;
 }
 
 .review-submit {
@@ -20,8 +23,8 @@
     border-bottom-left-radius: 300px;
     border-top-right-radius: 300px;
     border-bottom-right-radius: 300px;
-    width: 411px;
-    height: 37px;
+    width: 419px;
+    height: 46px;
     background: black;
     color: white;
     font-family: sans-serif;
@@ -29,6 +32,8 @@
     font-size: 16px;
     align-self: center;
     margin-top: 8px;
+    position: relative;
+    left: 26px;
 }
 
 .submit-form {
