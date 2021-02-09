@@ -16,17 +16,32 @@ export const createReview = (review, productId) => {
 
 // check before moving on
 
-export const destroyReview = (productId, reviewId) => {
+// export const destroyReview = (productId, reviewId) => {
+//     return $.ajax({
+//         method: 'DELETE',
+//         url: `/api/products/${productId}/reviews/${reviewId}`
+//     })
+// };
+
+// export const updateReview = (productId, review) => {
+//     return $.ajax({
+//         method: 'PATCH',
+//         url: `/api/products/${productId}/reviews/${review.id}`,
+//         data: { review: review }
+//     })
+// };
+
+export const destroyReview = (reviewId) => {
     return $.ajax({
         method: 'DELETE',
-        url: `/api/products/${productId}/reviews/${reviewId}`
+        url: `/api/reviews/${reviewId}`
     })
 };
 
-export const updateReview = (productId, review) => {
+export const updateReview = (review) => {
     return $.ajax({
         method: 'PATCH',
-        url: `/api/products/${productId}/reviews/${review.id}`,
+        url: `/api/reviews/${review.id}`,
         data: { review: review }
     })
 };

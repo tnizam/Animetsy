@@ -41,16 +41,32 @@ export const createReview = (review, productId) => dispatch => {
     ))
 };
 
-export const destroyReview = (productId, reviewId) => dispatch => {
-    return ReviewAPIUtil.destroyReview(productId, reviewId).then((reviewId) => (
+// export const destroyReview = (productId, reviewId) => dispatch => {
+//     return ReviewAPIUtil.destroyReview(productId, reviewId).then((reviewId) => (
+//         dispatch(removeReview(reviewId))
+//     ), errors => (
+//         dispatch(receiveReviewErrors(errors.responseJSON))
+//     ))
+// }
+
+// export const updateReview = (productId, review) => dispatch => {
+//     return ReviewAPIUtil.updateReview(productId, review).then((review) => (
+//         dispatch(receiveReview(review))
+//     ), errors => (
+//         dispatch(receiveReviewErrors(errors.responseJSON))
+//     ))
+// };
+
+export const destroyReview = (reviewId) => dispatch => {
+    return ReviewAPIUtil.destroyReview(reviewId).then((reviewId) => (
         dispatch(removeReview(reviewId))
     ), errors => (
         dispatch(receiveReviewErrors(errors.responseJSON))
     ))
 }
 
-export const updateReview = (productId, review) => dispatch => {
-    return ReviewAPIUtil.updateReview(productId, review).then((review) => (
+export const updateReview = (review) => dispatch => {
+    return ReviewAPIUtil.updateReview(review).then((review) => (
         dispatch(receiveReview(review))
     ), errors => (
         dispatch(receiveReviewErrors(errors.responseJSON))

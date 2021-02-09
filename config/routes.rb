@@ -4,8 +4,9 @@ Rails.application.routes.draw do
       resources :users, only: [:create]  # show page?
       resource :session, only: [:create, :destroy, :show]
       resources :products, only: [:index, :show] do #:update, :delete, :create --- for seller !
-        resources :reviews, only: [:create, :index, :show, :destroy, :update]
+        resources :reviews, only: [:create, :index, :show]
       end
+      resources :reviews, only: [:destroy, :update]
       resources :cart_items, only: [:index, :create, :show, :destroy, :update] do
         delete "clear", on: :collection
       end

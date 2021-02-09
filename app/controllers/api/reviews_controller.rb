@@ -45,8 +45,9 @@ class Api::ReviewsController < ApplicationController
     
     # might need to change also update?
     def destroy
+        
         if logged_in?
-            @review = Review.find(params[:id])
+            @review = current_user.reviews.find(params[:id])
             if @review.destroy
                 render :show 
             else
