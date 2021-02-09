@@ -29,9 +29,7 @@ class ReviewCreate extends React.Component {
         const review = Object.assign({}, this.state, {
             product_id: productId
         });
-        this.props.createReview(review, productId);
-        // this.navProductShow();
-
+        this.props.createReview(review, productId).then(() => window.location.reload());
     }
 
     updateReview(property) {

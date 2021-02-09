@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
 
-    before_action only: [:create];
+    before_action only: [:create, :destroy];
 
     def index
         if params[:product_id]
@@ -28,6 +28,29 @@ class Api::ReviewsController < ApplicationController
                 render :index
             else 
                 render json: @review.errors.full_messages, status: 422
+            end
+        end
+    end
+
+    def update
+        if logged_in?
+            @review = Review.find(params[:id])
+            if @review.update(review_params)
+                render :show
+            else
+                render json: @review.errors.full_messages, status: 422
+            end
+        end
+    end
+    
+    # might need to change also update?
+    def destroy
+        if logged_in?
+            @review = Review.find(params[:id])
+            if @review.destroy
+                render :show 
+            else
+                render ['could not find']
             end
         end
     end

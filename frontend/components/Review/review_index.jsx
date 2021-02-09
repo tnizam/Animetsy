@@ -8,20 +8,32 @@ class ReviewIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // authorId: this.props.reviews.author_id
-            authorId: this.props.authorId
+            authorId: this.props.authorId,
         }
+        // console.log("prop", props)
 
+        this.handleDeleteReview = this.handleDeleteReview.bind(this)
     }
 
+    // componentDidUpdate(prevProps, prevState) {
+    //     this.props.fetchReviews(this.props.productId);
+    // }
 
-    componentDidUpdate(prevProps, prevState) {
-        this.props.fetchReviews(this.props.productId);
+    
 
+    componentDidMount() {
+        this.props.fetchReviews(this.props.productId)
+    }
+
+    handleDeleteReview(e) {
+        e.preventDefault();
+        this.props.destroyReview(this.props.productId, this.props.reviewId).then(() => 
+            window.location.reload());
     }
 
     render() {
         const {reviews} = this.props;
+
         return (
             <div>
             <div className='reviews-box'>
@@ -44,6 +56,13 @@ class ReviewIndex extends React.Component {
                                 
                                 <div>
                                     {review.body}
+                                </div>
+                                
+                                <div>
+                                    {this.props.authorId === review.authorId ? 
+                                    <button onClick={this.handleDeleteReview}>Delete</button>
+                                    : null
+                                    }
                                 </div>
                                 
                                 

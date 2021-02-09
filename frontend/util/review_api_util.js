@@ -14,11 +14,19 @@ export const createReview = (review, productId) => {
     })
 }
 
+// check before moving on
 
-// export const createReview = (review) => {
-//     return $.ajax({
-//         method: 'POST',
-//         url: `/api/products/${review.product_id}/reviews`,
-//         data: { review }
-//     })
-// }
+export const destroyReview = (productId, reviewId) => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `/api/products/${productId}/reviews/${reviewId}`
+    })
+};
+
+export const updateReview = (productId, review) => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `/api/products/${productId}/reviews/${review.id}`,
+        data: { review: review }
+    })
+};
