@@ -1,7 +1,9 @@
 import React from 'react';
 import Rating from 'react-rating';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 import ReactStars from "react-rating-stars-component";
+import CartItem from '../Cart Item/cart_item';
 
 
 class ReviewIndex extends React.Component {
@@ -9,21 +11,43 @@ class ReviewIndex extends React.Component {
         super(props);
         this.state = {
             authorId: this.props.authorId,
-            reviewId: this.props.reviewId
+            reviewId: this.props.reviewId,
+            hideUpdate: false,
+            body: "",
+            rating: 1
         }
         // console.log("state", this.state)
 
         this.handleDeleteReview = this.handleDeleteReview.bind(this)
+        this.toggleUpdate = this.toggleUpdate.bind(this)
+        this.handleUpdateReview = this.handleUpdateReview.bind(this)
+        this.updateReview = this.updateReview.bind(this)
+        this.updateRating = this.updateRating.bind(this)
     }
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     this.props.fetchReviews(this.props.productId);
-    // }
-
-    
 
     componentDidMount() {
         this.props.fetchReviews(this.props.productId)
+    }
+
+    toggleUpdate() {
+        this.setState({hideUpdate: !this.state.hideUpdate})
+    }
+
+    updateReview(property) {
+        return e => this.setState({ [property]: e.target.value})
+    }
+    updateRating(property) {
+        return e => this.setState({ [property]: e})
+    }
+
+    handleUpdateReview(review) {
+        return(e) => this.props.updateReview({
+            product_id: review.productId,
+            author_id: review.authorId,
+            id: review.id,
+            body: this.state.body,
+            rating: this.state.rating
+        }).then(() => window.location.reload())
     }
 
     handleDeleteReview(reviewId) {
@@ -60,10 +84,34 @@ class ReviewIndex extends React.Component {
                                     {review.body}
                                 </div>
                                 
-                                <div>
-                                    {this.props.authorId === review.authorId ? 
-                                    <button onClick={this.handleDeleteReview(review.id)}>Delete</button>
-                                    : null
+                                <div className="review-buttons">
+                                    <div>
+                                        {this.props.authorId === review.authorId ? 
+                                        <button onClick={this.handleDeleteReview(review.id)}>Delete</button>
+                                        : null
+                                        }
+                                    </div>
+
+                                    {(this.props.authorId !== review.authorId) ? null :
+                                        <div>
+                                            <button onClick={this.toggleUpdate}>Update</button>
+
+                                            {this.state.hideUpdate ? 
+                                            <div className="update-container">
+                                                <Rating
+                                                    initialRating={this.state.rating}                                                    
+                                                    emptySymbol="far fa-star"
+                                                    fullSymbol="fas fa-star"
+                                                    onChange={this.updateRating('rating')}
+                                                />
+                                                <textarea cols="30" rows="10" 
+                                                value={this.state.body}
+                                                onChange={this.updateReview('body')}></textarea> 
+                                                <button onClick={this.handleUpdateReview(review)}>submit</button> 
+                                            </div>
+                                            
+                                            : null}
+                                        </div>                                                                        
                                     }
                                 </div>
                                 

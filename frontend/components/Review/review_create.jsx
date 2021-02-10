@@ -2,7 +2,6 @@ import React from 'react';
 import Rating from 'react-rating'
 import { withRouter } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/js/all.js';
-import ReactStars from "react-rating-stars-component";
 
 
 class ReviewCreate extends React.Component {
