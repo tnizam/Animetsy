@@ -84,20 +84,24 @@ class ReviewIndex extends React.Component {
                                     {review.body}
                                 </div>
                                 
-                                <div className="review-buttons">
+                                <div className="updates-container">
                                     <div>
                                         {this.props.authorId === review.authorId ? 
-                                        <button onClick={this.handleDeleteReview(review.id)}>Delete</button>
+                                        <button 
+                                            className="review-buttons"    
+                                            onClick={this.handleDeleteReview(review.id)}>Delete</button>
                                         : null
                                         }
                                     </div>
 
                                     {(this.props.authorId !== review.authorId) ? null :
                                         <div>
-                                            <button onClick={this.toggleUpdate}>Update</button>
+                                            <button 
+                                                className="review-buttons"
+                                                onClick={this.toggleUpdate}>Update</button>
 
                                             {this.state.hideUpdate ? 
-                                            <div className="update-container">
+                                            <div className="rev-update-container">
                                                 <Rating
                                                     initialRating={this.state.rating}                                                    
                                                     emptySymbol="far fa-star"
@@ -107,7 +111,9 @@ class ReviewIndex extends React.Component {
                                                 <textarea cols="30" rows="10" 
                                                 value={this.state.body}
                                                 onChange={this.updateReview('body')}></textarea> 
-                                                <button onClick={this.handleUpdateReview(review)}>submit</button> 
+                                                <button
+                                                    className="update-submit" 
+                                                    onClick={this.handleUpdateReview(review)}>Submit Update</button> 
                                             </div>
                                             
                                             : null}

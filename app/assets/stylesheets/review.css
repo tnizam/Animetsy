@@ -50,3 +50,52 @@
 .review-title {
     font-family: sans-serif;
 }
+
+.review-buttons {
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    width: 59px;
+    height: 31px;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 550;
+    font-size: 13px;
+    align-self: center;
+    margin-top: 4px;
+    position: relative;
+    left: 26px;
+}
+
+.updates-container {
+    display: flex;
+    position: relative;
+    right: 27px;
+}
+
+.rev-update-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    position: relative;
+    right: 38px;
+}
+
+.update-submit {
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    width: 186px;
+    height: 33px;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 550;
+    font-size: 16px;
+    align-self: center;
+    margin-top: 4px;
+    position: relative;
+}
