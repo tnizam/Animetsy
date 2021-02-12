@@ -78,7 +78,7 @@
 
 .nav-row {
     background-color: #232347;
-    height: 30px;
+    height: 39px;
 }
 
 .nav-list {
@@ -94,6 +94,7 @@
     justify-content: center;
     font-weight: 400;
     width: 95%;
+    font-size: 23px;
 }
 
 .nav-item {
